@@ -1,0 +1,59 @@
+---
+import Clients from "../components/Clients.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <main>
+    <div class="relative">
+      <div>
+        <img
+          src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`}
+          alt="nosotros"
+          class="h-[400px] md:w-full h-full object-cover"
+        />
+      </div>
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="absolute bottom-[10%] left-[20%]">
+        <p class="text-5xl md:text-6xl font-bold text-white">Nosotros</p>
+      </div>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto px-5 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+        <div class="md:col-span-4 flex flex-col gap-2 justify-center">
+          <p class="text-xl md:text-3xl font-bold">
+            Desarrollamos y ejecutamos proyectos complejos de almacenamiento
+            generando eficiencias en la operación logística de nuestros
+            clientes.
+          </p>
+          <p class="md:text-xl">
+            Somos una empresa peruana con 4 líneas de negocio especializadas en
+            brindar soluciones integrales para proyectos de almacenamiento,
+            construcción industrial, sistema de gases medicinales y equipamiento
+            para redes de gas natural domiciliario.
+          </p>
+          <p class="md:text-xl">
+            Nuestra metodología comienza con el estudio de la necesidad de cada
+            proyecto para generar soluciones eficientes y rentables.
+          </p>
+          <p class="md:text-xl">
+            Como empresa aspiramos a ser reconocidos como referentes de la
+            industria en Latinoamérica por nuestras propuestas innovadoras y por
+            nuestra excelente gestión de proyectos.
+          </p>
+        </div>
+        <div class="md:col-span-2">
+          <img
+            src={`${import.meta.env.BASE_URL}images/seccion_nosotros.png`}
+            alt="nosotros"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <Clients />
+  </main>
+</MainLayout>

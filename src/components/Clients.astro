@@ -1,12 +1,12 @@
 ---
 const clients = [
-  "/images/img-clientes/cerro_verde.png",
-  "/images/img-clientes/cerro_verde.png",
-  "/images/img-clientes/cerro_verde.png",
-  "/images/img-clientes/cerro_verde.png",
-  "/images/img-clientes/cerro_verde.png",
-  "/images/img-clientes/cerro_verde.png",
-  "/images/img-clientes/cerro_verde.png"
+  "images/img-clientes/cerro_verde.png",
+  "images/img-clientes/cerro_verde.png",
+  "images/img-clientes/cerro_verde.png",
+  "images/img-clientes/cerro_verde.png",
+  "images/img-clientes/cerro_verde.png",
+  "images/img-clientes/cerro_verde.png",
+  "images/img-clientes/cerro_verde.png"
 ];
 ---
 
@@ -30,8 +30,14 @@ const clients = [
            class="flex gap-16 overflow-hidden scroll-smooth w-full">
 
         {clients.map((client) => (
+          // <img 
+          //   src={client}
+          //   alt="Cliente"
+          //   class="h-12 shrink-0 opacity-80 hover:opacity-100 transition"
+          // />
+
           <img 
-            src={client}
+            src={`${import.meta.env.BASE_URL}${client}`}
             alt="Cliente"
             class="h-12 shrink-0 opacity-80 hover:opacity-100 transition"
           />

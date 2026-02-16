@@ -1,0 +1,68 @@
+---
+const clients = [
+  "/images/img-clientes/cerro_verde.png",
+  "/images/img-clientes/cerro_verde.png",
+  "/images/img-clientes/cerro_verde.png",
+  "/images/img-clientes/cerro_verde.png",
+  "/images/img-clientes/cerro_verde.png",
+  "/images/img-clientes/cerro_verde.png",
+  "/images/img-clientes/cerro_verde.png"
+];
+---
+
+<section class="py-[100px] bg-[#f2f2f2]">
+
+  <div class="max-w-[1200px] mx-auto px-5">
+
+    <h2 class="text-4xl font-bold mb-10">
+      Nuestros clientes
+    </h2>
+
+    <div class="flex items-center gap-4">
+
+      <!-- Flecha izquierda -->
+      <button id="prevBtn" class="text-3xl px-3">
+        ❮
+      </button>
+
+      <!-- Carrusel -->
+      <div id="carousel"
+           class="flex gap-16 overflow-hidden scroll-smooth w-full">
+
+        {clients.map((client) => (
+          <img 
+            src={client}
+            alt="Cliente"
+            class="h-12 shrink-0 opacity-80 hover:opacity-100 transition"
+          />
+        ))}
+
+      </div>
+
+      <!-- Flecha derecha -->
+      <button id="nextBtn" class="text-3xl px-3">
+        ❯
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  const carousel = document.getElementById("carousel");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
+  const scrollAmount = 300;
+
+  nextBtn?.addEventListener("click", () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+</script>
+

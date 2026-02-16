@@ -1,0 +1,85 @@
+<section class="w-full h-[650px] md:h-[1000px] relative overflow-hidden pb-[160px]">
+
+  <!-- Video -->
+  <div class="absolute inset-0">
+    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+      <source src="public/video/videocorto.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Contenido -->
+  <div class="flex justify-center items-center h-full">
+    <div class="relative z-10 flex items-center justify-center md:justify-start h-full text-white w-[250px] md:w-[1250px]">
+      <div class="flex flex-col">
+
+        <h1 class="text-4xl text-center md:text-start md:text-7xl font-bold">
+          GENERAMOS
+        </h1>
+
+        <div class="flex flex-col md:flex-row bg-[#FFA100] p-1 rounded-md">
+          <p class="text-4xl md:text-7xl font-bold pr-4">
+            ESPACIOS
+          </p>
+
+          <p id="dynamicText"
+            class="text-4xl md:text-7xl font-bold whitespace-nowrap relative inline-block min-w-[320px]">
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+//   const words = ["INTELIGENTES", "EFICIENTES", "MODERNOS"];
+//   let i = 0;
+
+//   const dynamicText = document.getElementById("dynamicText");
+
+//   function changeWord() {
+//     dynamicText.textContent = words[i];
+//     i = (i + 1) % words.length;
+//   }
+
+//   changeWord();
+//   setInterval(changeWord, 2000);
+const words = ["DINÁMICOS", "SEGUROS"];
+const el = document.getElementById("dynamicText");
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeLoop() {
+  const word = words[wordIndex];
+
+  if (!isDeleting) {
+    el.textContent = word.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === word.length) {
+      setTimeout(() => isDeleting = true, 1200);
+    }
+  } else {
+    el.textContent = word.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
+
+  const speed = isDeleting ? 60 : 120;
+  setTimeout(typeLoop, speed);
+}
+
+typeLoop();
+</script>
+

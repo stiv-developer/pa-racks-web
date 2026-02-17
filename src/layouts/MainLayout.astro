@@ -11,7 +11,7 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>P&A Racks</title>
   </head>
-  <body>
+  <body class="relative">
 
     <Navbar />
     <main></main>
@@ -19,6 +19,22 @@ import "../styles/global.css";
 
     <slot />
     <Footer />
+    <div class="fixed bottom-6 right-6 z-50">
+
+      <a 
+        href="https://wa.me/51999999999"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block hover:scale-110 transition-transform duration-300"
+      >
+        <img 
+          src={`${import.meta.env.BASE_URL}images/iconos/whatsapp.webp`} 
+          alt="WhatsApp"
+          class="w-16 md:w-20"
+        />
+      </a>
+
+    </div>
 
   </body>
 </html>

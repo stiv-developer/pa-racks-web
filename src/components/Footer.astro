@@ -53,9 +53,15 @@
         </p>
 
         <ul class="mt-5 text-[#B4C0E4] flex flex-col gap-4 text-lg">
-          <li class="hover:text-white cursor-pointer">Inicio</li>
-          <li class="hover:text-white cursor-pointer">Nosotros</li>
-          <li class="hover:text-white cursor-pointer">Contacto</li>
+          <li class="hover:text-white cursor-pointer">
+             <a href={`${import.meta.env.BASE_URL}/`} class="hover:opacity-80">Inicio</a>
+          </li>
+          <li class="hover:text-white cursor-pointer">
+            <a href={`${import.meta.env.BASE_URL}nosotros`} class="hover:opacity-80">Nosotros</a>
+          </li>
+          <li class="hover:text-white cursor-pointer">
+            <a href={`${import.meta.env.BASE_URL}contactos`} class="hover:opacity-80">Contacto</a>
+          </li>
           <li class="hover:text-white cursor-pointer">Negocios</li>
           <li class="hover:text-white cursor-pointer">Fichas técnicas</li>
         </ul>

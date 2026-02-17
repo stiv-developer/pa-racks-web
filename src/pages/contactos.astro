@@ -1,0 +1,106 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <main>
+    <div class="relative">
+      <div>
+        <img
+          src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`}
+          alt="nosotros"
+          class="h-[400px] md:w-full h-full object-cover"
+        />
+      </div>
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="absolute bottom-[10%] left-[20%]">
+        <p class="text-5xl md:text-6xl font-bold text-white">Contáctanos</p>
+      </div>
+    </div>
+    <div class="formulario"></div>
+    <div class="max-w-[1200px] mx-auto px-5 py-10">
+      <div class="flex flex-col md:flex-row gap-10">
+        <div>
+          <img
+            src={`${import.meta.env.BASE_URL}images/Planta-JRM.jpg`}
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <div>
+            <p class="text-[#00388B] text-lg text-bold">Siguenos en:</p>
+            <div class="flex gap-2 my-2">
+              <div
+                class="flex items-center justify-center rounded-full bg-[#00388B] w-12 h-12 cursor-pointer"
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}images/iconos/facebook_w.svg`}
+                  alt="facebook"
+                  class="w-6 h-6"
+                />
+              </div>
+              <div
+                class="flex items-center justify-center rounded-full bg-[#00388B] w-12 h-12 cursor-pointer"
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}images/iconos/linkedin_w.svg`}
+                  alt="linkedin"
+                  class="w-6 h-6"
+                />
+              </div>
+              <div
+                class="flex items-center justify-center rounded-full bg-[#00388B] w-12 h-12 cursor-pointer"
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}images/iconos/youtube_w.svg`}
+                  alt="youtube"
+                  class="w-6 h-6"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-[#00388B] text-lg text-bold">
+              Información de contacto:
+            </p>
+            <div class="flex items-start gap-2">
+              <img
+                src={`${import.meta.env.BASE_URL}images/iconos/phone_b.svg`}
+                alt="Teléfono"
+                class="w-5 h-5 mt-1"
+              />
+              <span>+511 619 4040</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <img
+                src={`${import.meta.env.BASE_URL}images/iconos/mail_b.svg`}
+                alt="Email"
+                class="w-5 h-5 mt-1"
+              />
+              <span>contacto@jrmsac.com.pe</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-[#00388B] text-lg text-bold">Dirección</p>
+            <div class="flex items-start gap-2">
+              <img
+                src={`${import.meta.env.BASE_URL}images/iconos/location_b.svg`}
+                alt="Email"
+                class="w-5 h-5 mt-1"
+              />
+              <span
+                >Calle Los Duraznos 645 San Juan De Lurigancho, Lima - Perú</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62450.055383408006!2d-77.11502132246711!3d-11.965606695700533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce21b6748c45%3A0xece5fa25a5e8c4d5!2sLos%20Olivos!5e0!3m2!1ses!2spe!4v1771299827760!5m2!1ses!2spe" class="w-full h-[500px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </main>
+</MainLayout>

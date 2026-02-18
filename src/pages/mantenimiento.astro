@@ -1,0 +1,89 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <main>
+    <div class="relative">
+      <div>
+        <img
+          src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`}
+          alt="nosotros"
+          class="h-[400px] md:w-full h-full object-cover"
+        />
+      </div>
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="absolute bottom-[10%] left-[20%]">
+        <p class="text-4xl md:text-6xl font-bold text-white">Mantenimiento de racks de</p>
+        <p class="text-4xl md:text-6xl font-bold text-white">almacenamiento</p>
+      </div>
+    </div>
+    <div class="max-w-[1200px] mx-auto px-5 py-10">
+      <div>
+        <div class="grid grid-cols-1 md:grid-cols-8 gap-4 my-20">
+          <div class="col-span-5">
+            <h3 class="text-4xl font-bold pb-2">Mantenimiento</h3>
+            <p class="text-base md:text-lg">
+              Como expertos en Sistemas Integrales de Almacenamiento, sabemos
+              que nuestro trabajo no termina con la entrega de obra; nuestro
+              compromiso también va dirigido a la prevención, cuidado y
+              mantenimiento de las estructuras, para lo cual estamos a
+              disposición de nuestros clientes durante todo el ciclo de vida de
+              las mismas
+            </p>
+          </div>
+          <div class="col-span-3">
+            <p class="font-bold text-lg pb-2">Para ello ponemos a su servicio:</p>
+            <ul>
+              <li class="text-base md:text-lg pb-2">Visita técnica gratuita e informe técnica</li>
+              <li class="text-base md:text-lg pb-2">Mantenimientos preventivos</li>
+              <li class="text-base md:text-lg">Mantenimientos correctivos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pb-10">
+          <img
+            src={`${import.meta.env.BASE_URL}images/capacitacion.jpg`}
+            alt=""
+          />
+        </div>
+        <div>
+          <h3 class="text-4xl font-bold pb-2">Capacitaciones</h3>
+          <p class="text-base md:text-lg">
+            Nuestra intención es que puedan extender la vida útil de sus
+            estructuras y para ellos es necesario contar con personal entrenado
+            en su conservación, para ello tenemos talleres de capacitación
+            constantes dirigidos a nuestros clientes en el buen uso y cuidado de
+            sus estructuras, así como en la buenas prácticas de almacenamiento.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#EBEFFF]">
+      <div class="max-w-[1200px] mx-auto px-5 py-10 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex flex-col justify-center">
+            <h3 class="text-4xl font-bold pb-2">Visitas técnicas</h3>
+            <p class="text-base md:text-lg">
+              Contamos con una área especializada encargada de programar y
+              realizar visitas técnicas con el fin de garantizar la operación
+              continua de nuestros clientes.
+            </p>
+            <p class="text-base md:text-lg">
+              Luego de cada visita técnica nuestros clientes reciben un informe
+              del estado actual de sus estructuras y la cantidad de posibles
+              piezas a reemplazar.
+            </p>
+          </div>
+          <div>
+            <img
+              src={`${import.meta.env.BASE_URL}images/programacion-de-visitas.jpg`}
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</MainLayout>

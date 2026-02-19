@@ -4,14 +4,20 @@ import Navbar from "../components/Navbar.astro";
 import Sidebar from "../components/Sidebar.astro";
 import "../styles/global.css";
 
-const title = "P&A Racks | Rack Metálico de Almacenaje";
-const description = "Venta de racks metálicos industriales en Lima. Instalación y fabricación a medida. Cotiza hoy mismo.";
+const title = "Racks Industriales en Lima | Venta y Fabricación al Mejor Precio - P&A Racks";
+const description = "Fabricación y venta de racks industriales metálicos en Lima. Instalación profesional y estructuras de alta resistencia para almacenes. Cotiza hoy mismo.";
+
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://stiv-developer.github.io" />
+    <!-- <meta property="og:image" content="https://stiv-developer.github.io/imagen-rack.jpg" /> -->
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>

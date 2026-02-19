@@ -3,13 +3,17 @@ import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Sidebar from "../components/Sidebar.astro";
 import "../styles/global.css";
+
+const title = "P&A Racks | Rack Metálico de Almacenaje";
+const description = "Venta de racks metálicos industriales en Lima. Instalación y fabricación a medida. Cotiza hoy mismo.";
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>P&A Racks</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
   </head>
   <body class="relative">
     <Navbar />

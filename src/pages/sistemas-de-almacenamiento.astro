@@ -3,37 +3,64 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 const projects = [
   {
-    title: "RACK DINÁMICO POR GRAVEDAD",
-    description:
-      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
-  },
-  {
-    title: "RACK MÓVIL",
-    description:
-      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
-  },
-  {
-    title: "JRM RUNNER",
-    description:
-      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
-  },
-  {
     title: "RACK SELECTIVO",
+    category: "pesada",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
     image: "images/img-proyectos/decor-efecto-autoportante.jpg",
   },
   {
     title: "RACK ACUMULATIVO",
+    category: "pesada",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
     image: "images/img-proyectos/decor-efecto-autoportante.jpg",
   },
   {
-    title: "AUTOPORTANTE",
+    title: "CANTILEVER",
+    category: "pesada",
+    description:
+      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  },
+  {
+    title: "RACK AUTOPORTANTE",
+    category: "pesada",
+    description:
+      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  },
+  {
+    title: "MINI RACK",
+    category: "semi",
+    description:
+      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  },
+  {
+    title: "MINI RACK",
+    category: "ENTREPISO RACK / ESTANTERIA",
+    description:
+      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  },
+  {
+    title: "ESTANTERÍA METALICA FIJA",
+    category: "ligera",
+    description:
+      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  },
+  {
+    title: "ESTANTERÍA METALICA MOVIL",
+    category: "ligera",
+    description:
+      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  },
+  {
+    title: "MEZZANINE ESTRUCTURAL",
+    category: "especial",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
     image: "images/img-proyectos/decor-efecto-autoportante.jpg",
@@ -64,11 +91,31 @@ const projects = [
     </div>
 
     <div class="max-w-[1200px] mx-auto px-5 py-10">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 mb-[180px]">
+      <div class="grid md:grid-cols-4 gap-3 shadow-2xl p-4">
+
+      <button data-filter="pesada" class="filter-btn active-btn">
+        Estructura para carga pesada
+      </button>
+
+      <button data-filter="semi" class="filter-btn">
+        Estructura para carga semi pesada
+      </button>
+
+      <button data-filter="ligera" class="filter-btn">
+        Estructura para carga ligera
+      </button>
+
+      <button data-filter="especial" class="filter-btn">
+        Estructura especiales
+      </button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 mb-[180px]" id="projects-container">
         {
           projects.map((project) => (
-            <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
-              {/* Imagen */}
+            <div 
+              class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              data-category={project.category}
+            >
               <div class="overflow-hidden h-[260px]">
                 <img
                   src={`${import.meta.env.BASE_URL}${project.image}`}
@@ -77,36 +124,14 @@ const projects = [
                 />
               </div>
 
-              {/* Contenido */}
               <div class="p-6">
-                <p class="text-2xl font-bold text-[#111111] mb-3">
+                <p class="text-2xl font-bold mb-3">
                   {project.title}
                 </p>
-
                 <p class="text-gray-600 leading-relaxed mb-6">
                   {project.description}
                 </p>
-
-                <a
-                  href="/racks-industriales"
-                  class="inline-flex items-center gap-2 text-blue-600 font-semibold text-lg group-hover:gap-3 transition-all"
-                >
-                  Conoce más
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </a>
+                <a href="/racks-industriales" class="inline-flex items-center gap-2 text-blue-600 font-semibold text-lg group-hover:gap-3 transition-all" > Conoce más <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" > <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /> </svg> </a>
               </div>
             </div>
           ))
@@ -115,3 +140,50 @@ const projects = [
     </div>
   </main>
 </MainLayout>
+
+<style>
+  .filter-btn {
+    @apply p-4 rounded-lg bg-[#D4DAF5] font-bold cursor-pointer transition-all;
+  }
+
+  .active-btn {
+    @apply bg-[#00388B] text-white;
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".project-card");
+
+  const defaultCategory = "pesada";
+
+  function filterProjects(category) {
+    cards.forEach(card => {
+      if (card.dataset.category === category) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Evento click
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+
+      buttons.forEach(btn => btn.classList.remove("active-btn"));
+      button.classList.add("active-btn");
+
+      filterProjects(filter);
+    });
+  });
+
+  // 🔥 Aplicar filtro al cargar
+  document.addEventListener("DOMContentLoaded", () => {
+    filterProjects(defaultCategory);
+
+    const defaultBtn = document.querySelector(`[data-filter="${defaultCategory}"]`);
+    defaultBtn?.classList.add("active-btn");
+  });
+</script>

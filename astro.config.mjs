@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap'
 // https://astro.build/config
 
 export default defineConfig({
-    site: 'https://pa-racks-web.vercel.app',
+    site: 'https://www.pya-racks.pe',
     output: 'static',
     integrations: [sitemap()]
 })

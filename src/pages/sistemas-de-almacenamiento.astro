@@ -1,0 +1,107 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const projects = [
+  {
+    title: "RACK DINÁMICO POR GRAVEDAD",
+    description:
+      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  },
+  {
+    title: "RACK MÓVIL",
+    description:
+      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  },
+  {
+    title: "JRM RUNNER",
+    description:
+      "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  },
+    {
+      title: "RACK SELECTIVO",
+      description: "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+      image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    },
+    {
+      title: "RACK ACUMULATIVO",
+      description: "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+      image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    },
+    {
+      title: "AUTOPORTANTE",
+      description: "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
+      image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    }
+];
+---
+
+<MainLayout>
+  <main>
+    <div class="relative">
+      <div>
+        <img
+          src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`}
+          alt="nosotros"
+          class="h-[400px] md:w-full h-full object-cover"
+        />
+      </div>
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="absolute bottom-[10%] left-[20%]">
+        <p class="text-5xl md:text-6xl font-bold text-white">
+          Sistemas de Almacenamiento
+        </p>
+        <p class="text-5xl md:text-3xl font-medium text-white">
+          Racks para todo tipo de cargas y equipamiento de almacenes
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto px-5 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 mb-[180px]">
+        {
+          projects.map((project) => (
+            <div class="cursor-pointer">
+              <img
+                src={`${import.meta.env.BASE_URL}${project.image}`}
+                alt={project.title}
+                class="w-full h-full object-cover transition-transform "
+              />
+              <div>
+                <p class="text-xl font-bold py-2 text-[#111111]">
+                  {project.title}
+                </p>
+                <p class="text-lg text-[#111111]">{project.description}</p>
+                <div class="flex items-center gap-2 pt-5">
+                  <a
+                    href="/racks-industriales"
+                    class="text-blue-500 font-semibold text-end text-lg inline-flex items-center gap-2"
+                  >
+                    Conoce más
+                  </a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-6 h-6 transition-transform group-hover:translate-x-1 text-blue-700"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </main>
+</MainLayout>

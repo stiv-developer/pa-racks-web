@@ -1,54 +1,62 @@
 ---
 const clients = [
-  "images/img-clientes/cerro_verde.png",
-  "images/img-clientes/cerro_verde.png",
-  "images/img-clientes/cerro_verde.png",
-  "images/img-clientes/cerro_verde.png",
-  "images/img-clientes/cerro_verde.png",
-  "images/img-clientes/cerro_verde.png",
-  "images/img-clientes/cerro_verde.png"
+  { src: "images/img-clientes/friopacking.png", bg: "bg-gray-800" },
+  { src: "images/img-clientes/danper.svg", bg: "bg-red-800" },
+  { src: "images/img-clientes/pura-fruit.png", bg: "bg-gray-800" },
+  { src: "images/img-clientes/savar.jpg" },
+  { src: "images/img-clientes/boart-longyear.webp", bg: "bg-gray-500" },
+  { src: "images/img-clientes/union.png", },
+  { src: "images/img-clientes/servifabrick.png",  },
+  { src: "images/img-clientes/logo_soltrak.png" },
+  { src: "images/img-clientes/coreptec.svg"},
+  { src: "images/img-clientes/overall_blue.svg"},
+  { src: "images/img-clientes/frioteam.svg", bg: "bg-sky-950" },
 ];
+
+
 ---
 
-<section class="py-[100px] bg-[#f2f2f2]">
+<section class="py-[80px] md:py-[100px]">
+  <div class="max-w-[1200px] mx-auto px-4">
 
-  <div class="max-w-[1200px] mx-auto px-5">
-
-    <h2 class="text-4xl font-bold mb-10">
+    <h2 class="text-3xl md:text-5xl font-bold mb-8 md:mb-10">
       Nuestros clientes
     </h2>
 
-    <div class="flex items-center gap-4">
-
-      <!-- Flecha izquierda -->
-      <button id="prevBtn" class="text-3xl px-3">
+    <div class="flex items-center gap-2 md:gap-4">
+      
+      <button
+        id="prevBtn"
+        class="text-2xl md:text-3xl px-2 md:px-3"
+      >
         ❮
       </button>
 
-      <!-- Carrusel -->
-      <div id="carousel"
-           class="flex gap-16 overflow-hidden scroll-smooth w-full">
-
-        {clients.map((client) => (
-
-          <img 
-            src={`${import.meta.env.BASE_URL}${client}`}
-            alt="Cliente"
-            class="h-12 shrink-0 opacity-80 hover:opacity-100 transition"
-          />
-        ))}
-
+      <div
+        id="carousel"
+        class="flex gap-6 md:gap-12 overflow-hidden scroll-smooth w-full"
+      >
+        {
+          clients.map((client) => (
+            <div class={`flex items-center justify-center p-2 rounded-md shrink-0 ${client.bg ?? ""}`}>
+              <img
+                src={`${import.meta.env.BASE_URL}${client.src}`}
+                alt="Cliente"
+                class="h-10 md:h-12 lg:h-14 w-auto"
+              />
+            </div>
+          ))
+        }
       </div>
 
-      <!-- Flecha derecha -->
-      <button id="nextBtn" class="text-3xl px-3">
+      <button
+        id="nextBtn"
+        class="text-2xl md:text-3xl px-2 md:px-3"
+      >
         ❯
       </button>
-
     </div>
-
   </div>
-
 </section>
 
 <script>
@@ -56,14 +64,21 @@ const clients = [
   const nextBtn = document.getElementById("nextBtn");
   const prevBtn = document.getElementById("prevBtn");
 
-  const scrollAmount = 300;
+  function getScrollAmount() {
+    return carousel.clientWidth * 0.8; 
+  }
 
   nextBtn?.addEventListener("click", () => {
-    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    carousel.scrollBy({
+      left: getScrollAmount(),
+      behavior: "smooth",
+    });
   });
 
   prevBtn?.addEventListener("click", () => {
-    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    carousel.scrollBy({
+      left: -getScrollAmount(),
+      behavior: "smooth",
+    });
   });
 </script>
-

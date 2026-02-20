@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stiv-developer.github.io/pa-racks-web/sitemap-index.xml
+Sitemap: https://www.pya-racks.pe/sitemap-index.xml

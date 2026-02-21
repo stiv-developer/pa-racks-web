@@ -4,66 +4,75 @@ import MainLayout from "../layouts/MainLayout.astro";
 const projects = [
   {
     title: "RACK SELECTIVO",
+    slug: "rack-selectivo",
     category: "pesada",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    image: "images/sistema-almacenamiento/rack-selectivo.jpeg",
   },
   {
     title: "RACK ACUMULATIVO",
+    slug: "rack-acumulativo",
     category: "pesada",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    image: "images/sistema-almacenamiento/rack-acumulativo.jpeg",
   },
   {
     title: "CANTILEVER",
+    slug: "cantilever",
     category: "pesada",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    image: "images/sistema-almacenamiento/cantilever.jpeg",
   },
   {
     title: "RACK AUTOPORTANTE",
+    slug: "rack-autoportante",
     category: "pesada",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    image: "images/sistema-almacenamiento/autoportante.jpeg",
   },
   {
     title: "MINI RACK",
+    slug: "mini-rack",
     category: "semi",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    image: "images/sistema-almacenamiento/mini-racks.jpeg",
   },
   {
     title: "ENTREPISO RACK / ESTANTERIA",
+    slug: "entrepiso-rack-estanteria",
     category: "semi",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    image: "images/sistema-almacenamiento/rack-entrepiso.jpeg",
   },
   {
     title: "ESTANTERÍA METALICA FIJA",
+    slug: "estanteria-metalica-fija",
     category: "ligera",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    image: "images/sistema-almacenamiento/estanteria-fija.jpeg",
   },
   {
     title: "ESTANTERÍA METALICA MOVIL",
+    slug: "estanteria-metalica-movil",
     category: "ligera",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    image: "images/sistema-almacenamiento/estanteria-movil.jpeg",
   },
   {
     title: "MEZZANINE ESTRUCTURAL",
+    slug: "mezzanine-estructural",
     category: "especial",
     description:
       "Solución que incorpora un sistema de rodillos con una ligera inclinación, lo que le permite el deslizamiento de las pa..",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+    image: "images/sistema-almacenamiento/mezanine.jpeg",
   },
 ];
 ---
@@ -131,7 +140,7 @@ const projects = [
                 <p class="text-gray-600 leading-relaxed mb-6">
                   {project.description}
                 </p>
-                <a href="/racks-industriales" class="inline-flex items-center gap-2 text-blue-600 font-semibold text-lg group-hover:gap-3 transition-all" > Conoce más <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" > <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /> </svg> </a>
+                <a href={`/racks-industriales/${project.slug}`} class="inline-flex items-center gap-2 text-blue-600 font-semibold text-lg group-hover:gap-3 transition-all" > Conoce más <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" > <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /> </svg> </a>
               </div>
             </div>
           ))

@@ -1,37 +1,169 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { projects } from "../../data/projects"
-
-// Puedes mover esto a un archivo externo luego
+import { projects } from "../../data/projects";
+import MainLayout from "../../layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
-  return projects.map(project => ({
+  return projects.map((project) => ({
     params: { slug: project.slug },
-    props: { project }
+    props: { project },
   }));
 }
 
 const { project } = Astro.props;
 ---
 
-<Layout>
+<MainLayout>
+  <main>
+    <div class="relative h-[250px] md:h-[350px] lg:h-[600px] overflow-hidden">
+      <img
+        src={`${import.meta.env.BASE_URL}${project.image}`}
+        alt={project.title}
+        class="w-full h-full object-cover"
+      />
 
-<section class="max-w-[1100px] mx-auto px-6 py-20">
+      <div class="absolute inset-0 bg-black/40"></div>
 
-  <h1 class="text-4xl font-bold mb-8">
-    {project.title}
-  </h1>
+      <div class="absolute inset-0 flex items-end">
+        <div class="max-w-[1200px] mx-auto px-6 pb-10 w-full flex flex-col md:flex-row justify-between gap-4 md:gap-0">
+          
+          <p class="text-3xl md:text-5xl font-bold text-white">{project.title}</p>
+          
+          <button class="bg-[#FFA100] text-lg text-white font-semibold px-4 py-2">Descargar brochure</button>
+       
+        </div>
+      </div>
+    </div>
 
-  <img 
-    src={project.image}
-    alt={project.title}
-    class="w-full h-[500px] object-cover rounded-xl mb-10"
-  />
+    <div class="max-w-[1200px] mx-auto px-5 py-10 md:py-[100px]">
+      <p class="text-lg md:text-xl font-bold text-gray-800 leading-relaxed">
+        {project.description}
+      </p>
 
-  <p class="text-lg text-gray-600 leading-relaxed">
-    {project.description}
-  </p>
+      <div>
+        <ul class="py-4">
+          <li class="flex gap-2 items-center jusitify-center py-2">
+            <img
+              src={`${import.meta.env.BASE_URL}images/iconos/check-b.svg`}
+              alt="check"
+              class="w-5 h-5"
+            />
+            <p class="text-base md:text-xl text-gray-600">Rack dinámico con rodillos</p>
+          </li>
+          <li class="flex gap-2 items-center jusitify-center py-2">
+            <img
+              src={`${import.meta.env.BASE_URL}images/iconos/check-b.svg`}
+              alt="check"
+              class="w-5 h-5"
+            />
+            <p class="text-base md:text-xl text-gray-600">Rack dinámico con ruedas</p>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-</section>
+    <div class="max-w-[1200px] mx-auto p-6">
+      <div class="relative">
 
-</Layout>
+        <div class="overflow-hidden">
+          <img
+            id="mainImage"
+            src={`${import.meta.env.BASE_URL}images/almacenamiento.jpg`}
+            class="w-full h-full md:h-[600px] object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-between">
+
+        <button id="prevBtn" class="text-2xl md:text-6xl font-bold"> ❮ </button>
+
+        <div id="thumbnails" class="flex gap-4 mt-4 overflow-x-auto">
+          <img
+            src={`${import.meta.env.BASE_URL}images/almacenamiento.jpg`}
+            class="thumb active-thumb"
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}images/capacitacion.jpg`}
+            class="thumb"
+          />
+        </div>
+
+        <button id="nextBtn" class="text-2xl md:text-6xl font-bold"> ❯</button>
+
+      </div>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto px-5 py-10 md:py-[100px]">
+      <h3 class="text-2xl md:text-4xl font-bold py-4">
+        Características y beneficios
+      </h3>
+
+      <ul class="flex flex-col gap-3">
+        <li class="flex gap-2 items-center">
+          <div class="bg-[#FFA100] w-2 h-2 rounded-full"></div>
+          <p class="text-lg md:text-xl text-gray-600">Perfecta rotación FIFO</p>
+        </li>
+        <li class="flex gap-2 items-center">
+          <div class="bg-[#FFA100] w-2 h-2 rounded-full"></div>
+          <p class="text-base md:text-xl text-gray-600">
+            Máxima capacidad por compactación, fácil acceso y ahorro de tiempos
+            de maniobras.
+          </p>
+        </li>
+        <li class="flex gap-2 items-center">
+          <div class="bg-[#FFA100] w-2 h-2 rounded-full"></div>
+          <p class="text-base md:text-xl text-gray-600">
+            Buen control de stock, cada pasillo una referencia.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </main>
+</MainLayout>
+
+<style>
+  .thumb {
+    @apply w-[120px] h-[80px] object-cover cursor-pointer opacity-60 transition duration-300;
+  }
+
+  .thumb:hover {
+    @apply opacity-100;
+  }
+
+  .active-thumb {
+    @apply opacity-100 ring-2 ring-white;
+  }
+</style>
+
+<script>
+  const mainImage = document.getElementById("mainImage");
+  const thumbnails = document.querySelectorAll(".thumb");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  let currentIndex = 0;
+
+  function updateImage(index) {
+    currentIndex = index;
+    mainImage.src = thumbnails[index].src;
+
+    thumbnails.forEach((t) => t.classList.remove("active-thumb"));
+    thumbnails[index].classList.add("active-thumb");
+  }
+
+  thumbnails.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => {
+      updateImage(index);
+    });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+    updateImage(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % thumbnails.length;
+    updateImage(currentIndex);
+  });
+</script>

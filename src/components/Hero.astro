@@ -1,10 +1,15 @@
 <section class="w-full h-[650px] md:h-[1000px] relative overflow-hidden pb-[160px]">
 
-  <!-- Video -->
   <div class="absolute inset-0">
-    <video autoplay muted loop playsinline class="w-full h-full object-cover">
-      <source src={`${import.meta.env.BASE_URL}video/videocorto.mp4`} type="video/mp4"> Tu navegador no soporta video.
-    </video>
+    <div id="carousel" class="flex w-full h-full transition-transform duration-700 ease-in-out">
+
+      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-1.jpeg`} alt="Rack industrial en almacén moderno" class="w-full h-full object-cover flex-shrink-0">
+      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-2.jpeg`} alt="Sistema de almacenamiento selectivo" class="w-full h-full object-cover flex-shrink-0">
+      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-3.jpeg`} alt="Racks industriales de alta capacidad" class="w-full h-full object-cover flex-shrink-0">
+      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-4.jpeg`} alt="Almacén industrial con racks acumulativos" class="w-full h-full object-cover flex-shrink-0">
+      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-5.jpeg`} alt="Sistema de almacenamiento metálico" class="w-full h-full object-cover flex-shrink-0">
+    
+    </div>
   </div>
 
   <!-- Overlay oscuro -->
@@ -20,13 +25,13 @@
         </h1>
 
         <div class="flex flex-col md:flex-row bg-[#FFA100] p-1 rounded-md">
-          <p class="text-4xl md:text-7xl text-center md:text-start font-bold pr-4">
+          <h1 class="text-4xl md:text-7xl text-center md:text-start font-bold pr-4">
             ESPACIOS
-          </p>
+          </h1>
 
-          <p id="dynamicText"
+          <h1 id="dynamicText"
             class="text-4xl md:text-7xl text-center md:text-start font-bold whitespace-nowrap relative inline-block min-w-[320px]">
-          </p>
+        </h1>
         </div>
 
       </div>
@@ -68,5 +73,19 @@ function typeLoop() {
 }
 
 typeLoop();
+// carousel
+const carousel = document.getElementById("carousel");
+const slides = carousel?.children;
+let index = 0;
+
+function nextSlide() {
+  index++;
+  if(index >= slides?.length) {
+    index = 0;
+  }
+
+  carousel.style.transform = `translateX(-${index * 100}%)`;
+}
+setInterval(nextSlide, 4000);
 </script>
 

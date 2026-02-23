@@ -1,41 +1,39 @@
 ---
 const projects = [
   {
-    title: "Decor Center - Autoportante",
-    category: "ALMACENAMIENTO",
+    title: "Mantenimeinto de techo",
     image: "images/img-proyectos/decor-efecto-autoportante.jpg",
     flag: "images/peru-flag.png"
   },
   {
-    title: "Proyecto Logístico Norte",
-    category: "ALMACENAMIENTO",
+    title: "Armado de mini racks",
     image: "images/img-proyectos/decor-efecto-autoportante.jpg",
     flag: "images/peru-flag.png"
   },
-  {
-    title: "Centro Industrial Sur",
-    category: "ALMACENAMIENTO",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
-    flag: "images/peru-flag.png"
-  },
-  {
-    title: "Proyecto Internacional",
-    category: "ALMACENAMIENTO",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
-    flag: "images/peru-flag.png"
-  },
-  {
-    title: "Proyecto Energético",
-    category: "ALMACENAMIENTO",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
-    flag: "images/peru-flag.png"
-  },
-  {
-    title: "Proyecto Minero",
-    category: "ALMACENAMIENTO",
-    image: "images/img-proyectos/decor-efecto-autoportante.jpg",
-    flag: "images/peru-flag.png"
-  }
+  // {
+  //   title: "Centro Industrial Sur",
+  //   category: "ALMACENAMIENTO",
+  //   image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  //   flag: "images/peru-flag.png"
+  // },
+  // {
+  //   title: "Proyecto Internacional",
+  //   category: "ALMACENAMIENTO",
+  //   image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  //   flag: "images/peru-flag.png"
+  // },
+  // {
+  //   title: "Proyecto Energético",
+  //   category: "ALMACENAMIENTO",
+  //   image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  //   flag: "images/peru-flag.png"
+  // },
+  // {
+  //   title: "Proyecto Minero",
+  //   category: "ALMACENAMIENTO",
+  //   image: "images/img-proyectos/decor-efecto-autoportante.jpg",
+  //   flag: "images/peru-flag.png"
+  // }
 ];
 ---
 
@@ -43,55 +41,49 @@ const projects = [
 
   <div class="w-full max-w-[1250px]">
 
-    <h3 class="text-center font-bold text-4xl md:text-5xl">
-      Proyectos
-    </h3>
+    <div class="relative flex justify-between bg-[#00388B] py-5 md:py-10 px-3">
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+      <h3 class="relative text-start font-bold text-4xl md:text-5xl text-white">NUESTROS PROYECTOS</h3>
+      <div class="hidden md:block">
+        <img src="images/persona.png" alt="persona" class="h-[400px] absolute right-2 top-[-150px]">
+      </div>
 
-      {projects.map((project) => (
+    </div>
 
-        <div class="relative overflow-hidden cursor-pointer group">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+
+    {projects.map((project) => (
+
+      <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-500">
+
+        <a href={`/proyectos/${project.slug}`} class="block relative">
 
           <img 
             src={`${import.meta.env.BASE_URL}${project.image}`}
-            alt={project.title}
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            alt={`${project.title} sistema de almacenamiento industrial`}
+            class="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
           />
 
-          <!-- Bandera -->
-          <div class="absolute top-3 right-3 
-                      w-[65px] h-[65px] 
-                      rounded-full overflow-hidden 
-                      border-4 border-white bg-white">
-            {/* <img 
-              src={project.flag} 
-              alt="País"
-              class="w-full h-full object-cover"
-            /> */}
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
 
-            <img 
-              src={`${import.meta.env.BASE_URL}${project.flag}`} 
-              alt="País"
-              class="w-full h-full object-cover"
-            />
+          <div class="absolute bottom-0 left-0 p-5 w-full">
+
+            <h2 class="text-white text-xl md:text-2xl font-bold">
+              {project.title}
+            </h2>
+
+            <p class="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition duration-500">
+              Ver más detalles →
+            </p>
+
           </div>
 
-          <!-- Texto -->
-          <div class="absolute bottom-4 left-4">
-            <div class="flex flex-col">
-              <p class="bg-white px-3 py-1 font-bold text-lg">
-                {project.title}
-              </p>
-              <p class="bg-[#FFA100] px-3 py-1 text-lg">
-                {project.category}
-              </p>
-            </div>
-          </div>
+        </a>
 
-        </div>
+      </article>
 
-      ))}
+    ))}
 
     </div>
 

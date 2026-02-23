@@ -13,8 +13,8 @@ export const projects = [
       "Rack selectivo para picking inferior"
     ],
     detail_image: [
-      "images/almacenamiento.jpg",
-      "images/capacitacion.jpg"
+      "images/sistema-almacenamiento/rack-selectivo.jpeg",
+      "images/sistema-almacenamiento/rack-selectivo-2.jpeg",
     ],
     characteristicsBenefits: [
       "Acceso directo al 100% de los pallets almacenados.",
@@ -40,8 +40,10 @@ export const projects = [
       "Rack acumulativo de alta densidad"
     ],
     detail_image: [
-      "images/almacenamiento.jpg",
-      "images/capacitacion.jpg"
+      "images/sistema-almacenamiento/rack-acumulativo.jpeg",
+      "images/sistema-almacenamiento/rack-acumulativo-2.jpeg",
+      "images/sistema-almacenamiento/rack-acumulativo-3.jpeg",
+      "images/sistema-almacenamiento/rack-acumulativo-4.jpeg",
     ],
     characteristicsBenefits: [
       "Optimiza el espacio hasta en un 80% al reducir pasillos operativos.",
@@ -68,8 +70,8 @@ export const projects = [
       "Cantilever sismo resistente"
     ],
     detail_image: [
-      "images/almacenamiento.jpg",
-      "images/capacitacion.jpg"
+      "images/sistema-almacenamiento/cantilever.jpeg",
+      "images/sistema-almacenamiento/cantilever-2.jpeg"
     ],
     characteristicsBenefits: [
       "Ideal para almacenamiento de materiales largos, voluminosos o irregulares.",
@@ -95,8 +97,9 @@ export const projects = [
       "Autoportante para sistemas dinámicos"
     ],
     detail_image: [
-      "images/almacenamiento.jpg",
-      "images/capacitacion.jpg"
+      "images/sistema-almacenamiento/autoportante.jpeg",
+      "images/sistema-almacenamiento/autoportante-2.jpeg",
+      "images/sistema-almacenamiento/autoportante-4.jpeg",
     ],
     characteristicsBenefits: [
       "Rápida instalación.",
@@ -119,8 +122,11 @@ export const projects = [
       "Mini rack para picking",
     ],
     detail_image: [
-      "images/almacenamiento.jpg",
-      "images/capacitacion.jpg"
+      "images/sistema-almacenamiento/mini-racks.jpeg",
+      "images/sistema-almacenamiento/mini-racks-2.jpeg",
+      "images/sistema-almacenamiento/mini-racks-3.jpeg",
+      "images/sistema-almacenamiento/mini-racks-4.jpeg",
+      "images/sistema-almacenamiento/mini-racks-5.jpeg",
     ],
     characteristicsBenefits: [
       "Optimiza el espacio vertical del almacén.",
@@ -146,8 +152,8 @@ export const projects = [
       "Entrepiso industrial reforzado"
     ],
     detail_image: [
-      "images/almacenamiento.jpg",
-      "images/capacitacion.jpg"
+      "images/sistema-almacenamiento/rack-entrepiso.jpeg",
+      "images/sistema-almacenamiento/rack-entrepiso-2.jpeg",
     ],
     characteristicsBenefits: [
       "Permite crear uno o más niveles adicionales de almacenamiento.",
@@ -172,8 +178,8 @@ export const projects = [
       "Estantería reforzada liviana"
     ],
     detail_image: [
-      "images/almacenamiento.jpg",
-      "images/capacitacion.jpg"
+      "images/sistema-almacenamiento/estanteria-fija.jpeg",
+      "images/sistema-almacenamiento/estanteria-fija-2.jpeg",
     ],
     characteristicsBenefits: [
       "Sistema modular adaptable a distintos espacios.",
@@ -197,8 +203,7 @@ export const projects = [
       "Estantería móvil para archivo"
     ],
     detail_image: [
-      "images/almacenamiento.jpg",
-      "images/capacitacion.jpg"
+      "images/sistema-almacenamiento/estanteria-movil.jpeg",
     ],
     characteristicsBenefits: [
       "Ahorra hasta un 80% de espacio al eliminar pasillos innecesarios.",
@@ -222,8 +227,9 @@ export const projects = [
       "Mezzanine sismo resistente",
     ],
     detail_image: [
-      "images/almacenamiento.jpg",
-      "images/capacitacion.jpg"
+      "images/sistema-almacenamiento/mezanine.jpeg",
+      "images/sistema-almacenamiento/mezanine-2.jpeg",
+      "images/sistema-almacenamiento/mezanine-3.jpeg"
     ],
     characteristicsBenefits: [
       "Para productos de gran variedad de carga y volumen.",

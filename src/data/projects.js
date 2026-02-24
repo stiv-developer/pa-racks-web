@@ -204,6 +204,8 @@ export const projects = [
     ],
     detail_image: [
       "images/sistema-almacenamiento/estanteria-movil.jpeg",
+      "images/sistema-almacenamiento/estanteria-movil-2.jpeg",
+      "images/sistema-almacenamiento/estanteria-movil-3.jpeg",
     ],
     characteristicsBenefits: [
       "Ahorra hasta un 80% de espacio al eliminar pasillos innecesarios.",

@@ -1,81 +1,75 @@
-<section class="py-16 px-5 flex justify-center">
+<section class="py-20 px-5 flex justify-center bg-gray-50">
 
-  <div class="relative grid grid-cols-1 md:grid-cols-2 gap-5 
-              w-full max-w-[1250px] h-auto md:h-[600px]">
+  <div class="w-full max-w-[1250px]">
 
-    <div class="relative overflow-hidden cursor-pointer group">
+    <!-- Título de sección -->
+    <header class="text-center mb-12 bg-[#00388B] py-5 md:py-10 px-3">
+      <h2 class="text-start font-bold text-4xl md:text-5xl text-white">
+        Nuestras Soluciones
+      </h2>
+      <p class="text-start font-base text-lg md:text-xl text-white pt-2">
+        Ofrecemos soluciones integrales en almacenamiento industrial y mantenimiento,
+        adaptadas a las necesidades de cada cliente.
+      </p>
+    </header>
 
-      <img src={`${import.meta.env.BASE_URL}images/almacenamiento.jpg`} 
-        alt="Almacenamiento"
-        class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-110"
-      >
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:h-[600px]">
 
-      <div class="absolute inset-0 bg-black/40"></div>
+      <!-- CARD 1 -->
+      <article class="relative overflow-hidden rounded-2xl shadow-md group">
 
-      <div class="absolute bottom-5 left-5">
-        <p class="text-white font-bold text-2xl">
-          Almacenamiento
-        </p>
-      </div>
+        <a href="/mantenimiento-de-rack-almacenamiento" class="block h-full">
 
-    </div>
-
-    <div class="flex flex-col gap-5">
-
-      <div class="relative flex-1 overflow-hidden cursor-pointer group">
-
-        <img src={`${import.meta.env.BASE_URL}images/construccion.jpg`}  
-          alt="Ingeniería y construcción"
-          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        >
-
-        <div class="absolute inset-0 bg-black/40"></div>
-
-        <div class="absolute bottom-5 left-5">
-          <p class="text-white font-bold text-2xl">
-            Mantenimiento de techo
-          </p>
-        </div>
-
-      </div>
-
-      <!-- <div class="flex gap-5 flex-col md:flex-row flex-1"> -->
-
-        <!-- <div class="relative flex-1 overflow-hidden cursor-pointer group">
-
-          <img src={`${import.meta.env.BASE_URL}images/energia.jpg`} 
-            alt="Energía"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          <img 
+            src={`${import.meta.env.BASE_URL}images/almacenamiento.jpeg`} 
+            alt="Sistemas de almacenamiento industrial"
+            class="w-full h-full object-cover object-bottom transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
           >
 
-          <div class="absolute inset-0 bg-black/40"></div>
+          <!-- Overlay elegante -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-          <div class="absolute bottom-5 left-5">
-            <p class="text-white font-bold text-2xl">
-              Energía
+          <!-- Contenido -->
+          <div class="absolute bottom-8 left-8 text-white">
+            <h3 class="text-2xl md:text-3xl font-bold">
+              Almacenamiento
+            </h3>
+            <p class="mt-2 opacity-0 group-hover:opacity-100 transition duration-500">
+              Ver soluciones →
             </p>
           </div>
 
-        </div> -->
+        </a>
 
-        <!-- <div class="relative flex-1 overflow-hidden cursor-pointer group">
+      </article>
 
-          <img src={`${import.meta.env.BASE_URL}images/medico.jpg`}  
-            alt="Medicinal"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      <!-- CARD 2 -->
+      <article class="relative overflow-hidden rounded-2xl shadow-md group">
+
+        <a href="/mantenimiento-de-techo" class="block h-full">
+
+          <img 
+            src={`${import.meta.env.BASE_URL}images/mantenimiento-de-techo.jpeg`}  
+            alt="Servicio de mantenimiento de techos industriales"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
           >
 
-          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-          <div class="absolute bottom-5 left-5">
-            <p class="text-white font-bold text-2xl">
-              Servicios Generales
+          <div class="absolute bottom-8 left-8 text-white">
+            <h3 class="text-2xl md:text-3xl font-bold">
+              Mantenimiento de Techos
+            </h3>
+            <p class="mt-2 opacity-0 group-hover:opacity-100 transition duration-500">
+              Ver servicio →
             </p>
           </div>
 
-        </div> -->
+        </a>
 
-      <!-- </div> -->
+      </article>
 
     </div>
 

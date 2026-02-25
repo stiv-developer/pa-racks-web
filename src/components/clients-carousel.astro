@@ -42,8 +42,11 @@
 
 <style>
   .logo {
-    @apply h-[50px] md:h-[70px] object-contain opacity-80 hover:opacity-100 transition;
-  }
+  height: clamp(40px, 6vw, 80px);
+  object-fit: contain;
+  opacity: 0.8;
+  transition: 0.3s;
+}
 
   @keyframes scroll {
     from {
@@ -55,6 +58,12 @@
   }
 
   .animate-scroll {
-    animation: scroll 30s linear infinite;
+  animation: scroll 35s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation-duration: 20s;
   }
+}
 </style>

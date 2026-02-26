@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <main>
-    <section class="relative h-[300px] md:h-[450px] lg:h-[550px] overflow-hidden">
+    <section class="relative h-[400px] md:h-[450px] lg:h-[550px] overflow-hidden">
       <img
         src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`} 
         alt="Oficinas de atención y soporte técnico de R&A Racks en Lima"
@@ -59,17 +59,17 @@ import MainLayout from "../layouts/MainLayout.astro";
                       <h3 class="text-[#00388B] text-sm font-bold uppercase tracking-widest mb-4">Canales Directos</h3>
                       <div class="space-y-4">
                           <a href="tel:+51923808882" class="flex items-center gap-4 group">
-                              <div class="bg-blue-50 p-3 rounded-full transition-colors">
-                                  <img src={`${import.meta.env.BASE_URL}images/iconos/phone_b.svg`} alt="Teléfono" class="w-6 h-6 transition-all"/>
+                              <div class="bg-blue-50 p-3 rounded-full group-hover:bg-blue-600 transition-colors">
+                                  <img src={`${import.meta.env.BASE_URL}images/iconos/phone_b.svg`} alt="Teléfono" class="w-6 h-6 group-hover:invert transition-all"/>
                               </div>
-                              <span class="text-lg md:text-xl font-medium text-gray-700 ">+51 923 808 882</span>
+                              <span class="text-lg md:text-xl font-medium text-gray-700 group-hover:text-blue-600">+51 923 808 882</span>
                           </a>
                           
                           <a href="mailto:hcavero@pyaracks.com" class="flex items-center gap-4 group">
-                              <div class="bg-blue-50 p-3 rounded-full transition-colors">
-                                  <img src={`${import.meta.env.BASE_URL}images/iconos/mail_b.svg`} alt="Email" class="w-6 h-6 transition-all"/>
+                              <div class="bg-blue-50 p-3 rounded-full group-hover:bg-blue-600 transition-colors">
+                                  <img src={`${import.meta.env.BASE_URL}images/iconos/mail_b.svg`} alt="Email" class="w-6 h-6 group-hover:invert transition-all"/>
                               </div>
-                              <span class="text-lg md:text-xl font-medium text-gray-700 break-all">hcavero@pyaracks.com</span>
+                              <span class="text-lg md:text-xl font-medium text-gray-700 group-hover:text-blue-600 break-all">hcavero@pyaracks.com</span>
                           </a>
                       </div>
                   </div>

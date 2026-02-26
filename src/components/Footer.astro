@@ -1,109 +1,85 @@
-<footer class="py-16 bg-[#00388B] text-white">
-
+<footer class="py-16 bg-[#002B6B] text-white border-t-4 border-blue-600">
   <div class="max-w-[1200px] mx-auto px-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-
-      <!-- CONTACTO -->
       <div>
-        <p class="font-bold text-xl">
-          CONTACTO
-        </p>
-
-        <ul class="mt-5 text-[#B4C0E4] flex flex-col gap-4 text-lg">
-
-          <!-- Redes -->
-          <!-- <li class="flex gap-3">
-            <div class="flex items-center justify-center rounded-full bg-[#FFA100] w-12 h-12 cursor-pointer hover:scale-105 transition">
-              <img src={`${import.meta.env.BASE_URL}images/iconos/facebook_w.svg`} alt="Facebook" class="w-6 h-6">
-            </div>
-            <div class="flex items-center justify-center rounded-full bg-[#FFA100] w-12 h-12 cursor-pointer hover:scale-105 transition">
-              <img src={`${import.meta.env.BASE_URL}images/iconos/linkedin_w.svg`} alt="LinkedIn" class="w-6 h-6">
-            </div>
-            <div class="flex items-center justify-center rounded-full bg-[#FFA100] w-12 h-12 cursor-pointer hover:scale-105 transition">
-              <img src={`${import.meta.env.BASE_URL}images/iconos/youtube_w.svg`} alt="YouTube" class="w-6 h-6">
-            </div>
-          </li> -->
-
-          <li class="flex items-start gap-2">
-            <img src={`${import.meta.env.BASE_URL}images/iconos/phone_w.svg`} alt="Teléfono" class="w-5 h-5 mt-1">
-            <span>+51 923 808 882</span>
+        <h3 class="font-bold text-xl mb-6 tracking-tight">CONTACTO</h3>
+        <ul class="text-[#B4C0E4] flex flex-col gap-5 text-base md:text-lg">
+          <li>
+            <a href="tel:+51923808882" class="flex items-start gap-3 hover:text-white transition-colors group">
+              <img src={`${import.meta.env.BASE_URL}images/iconos/phone_w.svg`} alt="Teléfono" class="w-5 h-5 mt-1 group-hover:scale-110 transition-transform">
+              <span>+51 923 808 882</span>
+            </a>
           </li>
-
-          <li class="flex items-start gap-2">
-            <img src={`${import.meta.env.BASE_URL}images/iconos/mail_w.svg`} alt="Email" class="w-5 h-5 mt-1">
-            <span>hcavero@pyaracks.com</span>
+          <li>
+            <a href="mailto:hcavero@pyaracks.com" class="flex items-start gap-3 hover:text-white transition-colors group">
+              <img src={`${import.meta.env.BASE_URL}images/iconos/mail_w.svg`} alt="Email" class="w-5 h-5 mt-1 group-hover:scale-110 transition-transform">
+              <span class="break-all">hcavero@pyaracks.com</span>
+            </a>
           </li>
-
-          <li class="flex items-start gap-2">
+          <li class="flex items-start gap-3">
             <img src={`${import.meta.env.BASE_URL}images/iconos/location_w.svg`} alt="Dirección" class="w-5 h-5 mt-1">
-            <span>CAL.4 MZA. E 5 LOTE. 9 A.H. BOCANEGRA PROV. CONST. DEL CALLAO - PROV. CONST. DEL CALLAO - CALLAO
-            </span>
+            <address class="not-italic text-sm leading-relaxed text-[#B4C0E4]">
+              CAL. 4 MZA. E-5 LOTE 9 A.H. BOCANEGRA<br>
+              CALLAO, PERÚ
+            </address>
           </li>
-
         </ul>
       </div>
 
-      <!-- MENU -->
       <div>
-        <p class="font-bold text-xl">
-          MENU
+        <h3 class="font-bold text-xl mb-6 tracking-tight">MENÚ</h3>
+        <ul class="text-[#B4C0E4] flex flex-col gap-4 text-lg">
+          <li><a href={`${import.meta.env.BASE_URL}/`} class="hover:text-white hover:pl-2 transition-all duration-300">Inicio</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}nosotros`} class="hover:text-white hover:pl-2 transition-all duration-300">Nosotros</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}proyectos`} class="hover:text-white hover:pl-2 transition-all duration-300">Proyectos</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}contactos`} class="hover:text-white hover:pl-2 transition-all duration-300">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-6 tracking-tight">SERVICIOS</h3>
+        <ul class="text-[#B4C0E4] flex flex-col gap-4 text-lg">
+          <li><a href={`${import.meta.env.BASE_URL}sistemas-de-almacenamiento`} class="hover:text-white transition-colors">Sistemas de Almacenaje</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}mantenimiento-de-rack-almacenamiento`} class="hover:text-white transition-colors">Mantenimiento de Racks</a></li>
+          <li><span class="cursor-default">Racks Industriales</span></li>
+          <li><span class="cursor-default">Mezanines y MiniRacks</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-6 tracking-tight">HORARIO</h3>
+        <ul class="text-[#B4C0E4] flex flex-col gap-4 text-lg">
+          <li class="flex flex-col">
+            <span class="text-white text-sm font-semibold uppercase">Lunes a Viernes:</span>
+            <span>08:00 AM - 05:30 PM</span>
+          </li>
+          <li class="flex flex-col">
+            <span class="text-white text-sm font-semibold uppercase">Sábados:</span>
+            <span>08:00 AM - 01:00 PM</span>
+          </li>
+          <li class="mt-2">
+            <a href="/politica-privacidad" class="text-sm underline hover:text-white transition-colors">Privacidad y Datos</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="w-full h-px bg-white/10 my-10"></div>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex flex-col items-center md:items-start">
+        <p class="text-sm text-[#B4C0E4]">
+          © 2026 <strong>R&A Racks</strong>. Todos los derechos reservados.
         </p>
-
-        <ul class="mt-5 text-[#B4C0E4] flex flex-col gap-4 text-lg">
-          <li class="hover:text-white cursor-pointer">
-             <a href={`${import.meta.env.BASE_URL}/`} class="hover:opacity-80">Inicio</a>
-          </li>
-          <li class="hover:text-white cursor-pointer">
-            <a href={`${import.meta.env.BASE_URL}nosotros`} class="hover:opacity-80">Nosotros</a>
-          </li>
-          <li class="hover:text-white cursor-pointer">
-            <a href={`${import.meta.env.BASE_URL}contactos`} class="hover:opacity-80">Contacto</a>
-          </li>
-          <li class="hover:text-white cursor-pointer">Proyectos</li>
-        </ul>
+        <p class="text-[10px] text-[#B4C0E4]/50 uppercase tracking-widest mt-1">Ingeniería que optimiza tu espacio</p>
       </div>
-
-      <div class="hidden md:block">
-        <p class="font-bold text-xl">NUESTROS PRODUCTOS</p>
-
-        <ul class="mt-5 text-[#B4C0E4] flex flex-col gap-4 text-lg">
-          <li>Estanterías Metálicas</li>
-          <li>Racks Industriales</li>
-          <li>Mezanine</li>
-          <li>Miniracks</li>
-        </ul>
+      
+      <div class="flex gap-4">
+        <a href="#" class="p-2 bg-white/5 rounded-full hover:bg-blue-600 transition-all"><span class="sr-only">LinkedIn</span> </a>
+        <a href="#" class="p-2 bg-white/5 rounded-full hover:bg-blue-600 transition-all"><span class="sr-only">Facebook</span> </a>
       </div>
-
-      <div>
-        <p class="font-bold text-xl">HORARIO DE ATENCIÓN</p>
-
-        <ul class="mt-5 text-[#B4C0E4] flex flex-col gap-4 text-lg">
-          <li>Lun a Vi: 8:00 - 05:30</li>
-          <li>Sábado: 08:00 - 13:00</li>
-          <li>Política de privacidad y protección de datos.</li>
-        </ul>
-      </div>
-
     </div>
-
-    <!-- Línea -->
-    <div class="w-full h-[2px] rounded-full bg-[#EBEFF6] my-10"></div>
-
-    <!-- Bottom -->
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-
-      <div>
-        <!-- Aquí puedes poner logo -->
-        <!-- <img src="/images/logo-footer.svg" alt="Logo" class="h-10"> -->
-      </div>
-
-      <p class="text-sm text-[#B4C0E4]">
-        © 2026 Todos los derechos reservados
-      </p>
-
-    </div>
-
   </div>
-
 </footer>

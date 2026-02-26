@@ -1,41 +1,55 @@
-<section class="w-full h-[650px] md:h-[1000px] relative overflow-hidden pb-[160px]">
-
-  <div class="absolute inset-0">
-    <div id="carousel" class="flex w-full h-full transition-transform duration-700 ease-in-out">
-
-      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-1.jpeg`} alt="Rack industrial en almacén moderno" class="w-full h-full object-cover flex-shrink-0">
-      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-2.jpeg`} alt="Sistema de almacenamiento selectivo" class="w-full h-full object-cover flex-shrink-0">
-      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-3.jpeg`} alt="Racks industriales de alta capacidad" class="w-full h-full object-cover flex-shrink-0">
-      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-4.jpeg`} alt="Almacén industrial con racks acumulativos" class="w-full h-full object-cover flex-shrink-0">
-      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-5.jpeg`} alt="Sistema de almacenamiento metálico" class="w-full h-full object-cover flex-shrink-0">
-    
+<section class="relative w-full h-[70vh] md:h-[90vh] lg:h-screen overflow-hidden bg-gray-900">
+  
+  <div class="absolute inset-0 z-0">
+    <div id="carousel" class="flex w-full h-full transition-transform duration-1000 ease-in-out">
+      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-1.jpeg`} 
+           alt="Racks industriales para almacenes de alta densidad" 
+           class="w-full h-full object-cover flex-shrink-0" 
+           fetchpriority="high" loading="eager">
+      
+      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-2.jpeg`} alt="Sistemas de almacenamiento selectivo en Perú" class="w-full h-full object-cover flex-shrink-0" loading="lazy">
+      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-3.jpeg`} alt="Instalación de racks industriales certificados" class="w-full h-full object-cover flex-shrink-0" loading="lazy">
+      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-4.jpeg`} alt="Optimización de espacios logísticos" class="w-full h-full object-cover flex-shrink-0" loading="lazy">
     </div>
   </div>
 
-  <!-- Overlay oscuro -->
-  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10"></div>
 
-  <!-- Contenido -->
-  <div class="flex justify-center items-center h-full">
-    <div class="relative z-10 flex items-center justify-center md:justify-start h-full text-white w-[250px] md:w-[1250px]">
-      <div class="flex flex-col">
+  <div class="relative z-20 h-full max-w-[1250px] mx-auto px-6 flex items-center">
+    <div class="flex flex-col gap-2 md:gap-4">
+      
+      <span class="text-blue-400 font-bold uppercase tracking-[0.3em] text-sm md:text-lg mb-2">
+        Ingeniería en Almacenamiento
+      </span>
 
-        <h1 class="text-4xl text-center md:text-start md:text-7xl font-bold">
-          GENERAMOS
-        </h1>
+      <h1 class="text-5xl md:text-8xl font-black text-white leading-none">
+        GENERAMOS <br class="hidden md:block">
+        <span class="inline-flex flex-col md:flex-row items-center md:items-start gap-3 mt-2">
+          <span class="bg-[#FFA100] px-4 py-1 rounded-sm text-white">ESPACIOS</span>
+          <span id="dynamicText" class="text-white border-r-4 border-white pr-2 min-w-[280px] md:min-w-[450px]"></span>
+        </span>
+      </h1>
 
-        <div class="flex flex-col md:flex-row bg-[#FFA100] p-1 rounded-md">
-          <h1 class="text-4xl md:text-7xl text-center md:text-start font-bold pr-4">
-            ESPACIOS
-          </h1>
+      <p class="text-gray-200 text-lg md:text-2xl max-w-xl mt-6 font-medium leading-relaxed drop-shadow-md">
+        Diseñamos y ejecutamos proyectos de alta complejidad para maximizar la eficiencia de su centro de distribución.
+      </p>
 
-          <h1 id="dynamicText"
-            class="text-4xl md:text-7xl text-center md:text-start font-bold whitespace-nowrap relative inline-block min-w-[320px]">
-        </h1>
-        </div>
-
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href={`${import.meta.env.BASE_URL}proyectos`} class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-md transition-all transform hover:-translate-y-1 shadow-lg">
+          Ver Proyectos
+        </a>
+        <a href={`${import.meta.env.BASE_URL}contactos`} class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-md backdrop-blur-md transition-all border border-white/30">
+          Solicitar Cotización
+        </a>
       </div>
+
     </div>
+  </div>
+
+  <div class="absolute bottom-10 right-10 z-30 flex gap-2">
+    <div class="slide-dot w-3 h-3 rounded-full bg-white/50"></div>
+    <div class="slide-dot w-3 h-3 rounded-full bg-white/50"></div>
+    <div class="slide-dot w-3 h-3 rounded-full bg-white/50"></div>
   </div>
 
 </section>

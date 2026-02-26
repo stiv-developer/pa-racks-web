@@ -4,87 +4,160 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <main>
-    <div class="relative">
-      <div>
-        <img
-          src={`${import.meta.env.BASE_URL}images/mantenimiento-de-racks/mantenimiento-de-racks-banner.jpeg`}
-          alt="nosotros"
-          class="h-[360px] md:h-[800px] md:w-full h-full object-cover"
-        />
-      </div>
-      <div class="absolute inset-0 bg-black/40"></div>
+    <section
+      class="relative h-[300px] md:h-[450px] lg:h-[600px] overflow-hidden"
+    >
+      <img
+        src={`${import.meta.env.BASE_URL}images/mantenimiento-de-racks/mantenimiento-de-racks-banner.jpeg`}
+        alt="Servicio especializado de mantenimiento de racks y estanterías industriales"
+        class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+        loading="eager"
+        fetchpriority="high"
+      />
 
-      <div class="absolute bottom-[10%] left-[20%]">
-        <p class="text-4xl md:text-6xl font-bold text-white">Mantenimiento de racks de</p>
-        <p class="text-4xl md:text-6xl font-bold text-white">almacenamiento</p>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+      >
       </div>
-    </div>
-    <div class="max-w-[1200px] mx-auto px-5 py-10">
-      <div>
-        <div class="grid grid-cols-1 md:grid-cols-8 gap-4 my-20">
-          <div class="col-span-5">
-            <h3 class="text-4xl font-bold pb-2">Mantenimiento</h3>
-            <p class="text-base md:text-lg">
-              Como expertos en Sistemas Integrales de Almacenamiento, sabemos
-              que nuestro trabajo no termina con la entrega de obra; nuestro
-              compromiso también va dirigido a la prevención, cuidado y
-              mantenimiento de las estructuras, para lo cual estamos a
-              disposición de nuestros clientes durante todo el ciclo de vida de
-              las mismas
-            </p>
-          </div>
-          <div class="col-span-3">
-            <p class="font-bold text-lg pb-2">Para ello ponemos a su servicio:</p>
-            <ul>
-              <li class="text-base md:text-lg pb-2">Visita técnica gratuita e informe técnica</li>
-              <li class="text-base md:text-lg pb-2">Mantenimientos preventivos</li>
-              <li class="text-base md:text-lg">Mantenimientos correctivos</li>
-            </ul>
-          </div>
-        </div>
-        <div class="pb-10">
-          <img
-            src={`${import.meta.env.BASE_URL}images/capacitacion.jpg`}
-            alt=""
-          />
-        </div>
-        <div>
-          <h3 class="text-4xl font-bold pb-2">Capacitaciones</h3>
-          <p class="text-base md:text-lg">
-            Nuestra intención es que puedan extender la vida útil de sus
-            estructuras y para ellos es necesario contar con personal entrenado
-            en su conservación, para ello tenemos talleres de capacitación
-            constantes dirigidos a nuestros clientes en el buen uso y cuidado de
-            sus estructuras, así como en la buenas prácticas de almacenamiento.
+
+      <div class="absolute inset-0 flex items-end">
+        <div class="max-w-[1200px] mx-auto px-6 pb-12 w-full">
+          <nav
+            class="mb-4 flex items-center gap-2 text-blue-400 text-sm font-semibold uppercase tracking-widest"
+            aria-label="Breadcrumb"
+          >
+            <a
+              href={`${import.meta.env.BASE_URL}negocios`}
+              class="hover:text-white transition-colors">Negocios</a
+            >
+            <span class="text-gray-400">/</span>
+            <span class="text-white/80">Servicios Industriales</span>
+          </nav>
+
+          <h1
+            class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-lg max-w-4xl"
+          >
+            Mantenimiento de Racks de Almacenamiento e Inspección Técnica
+          </h1>
+
+          <div class="w-24 h-2 bg-blue-600 mt-6 rounded-full shadow-lg"></div>
+
+          <p
+            class="mt-6 text-gray-200 text-lg md:text-xl max-w-2xl font-medium leading-relaxed drop-shadow-md"
+          >
+            Garantizamos la seguridad operativa de sus almacenes mediante
+            mantenimiento preventivo y correctivo de estanterías industriales.
           </p>
         </div>
       </div>
+    </section>
+
+    <div class="max-w-[1200px] mx-auto px-5 py-10 md:py-20">
+      <section class="grid grid-cols-1 md:grid-cols-8 gap-8 mb-20 items-center">
+        <div class="col-span-1 md:col-span-5">
+          <h2
+            class="text-3xl md:text-4xl font-bold pb-4 text-gray-900 leading-tight"
+          >
+            Mantenimiento Preventivo y Correctivo de Racks
+          </h2>
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+            Como expertos en <strong
+              >Sistemas Integrales de Almacenamiento</strong
+            >, nuestro compromiso trasciende la entrega del proyecto. Nos
+            enfocamos en la prevención y cuidado estructural, garantizando la
+            seguridad y operatividad de sus almacenes durante todo el ciclo de
+            vida de las estructuras.
+          </p>
+        </div>
+
+        <div
+          class="col-span-1 md:col-span-3 bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600"
+        >
+          <p class="font-bold text-xl pb-4 text-blue-900">
+            Servicios especializados:
+          </p>
+          <ul class="space-y-3">
+            <li
+              class="flex items-center gap-2 text-base md:text-lg text-gray-800"
+            >
+              <span class="text-blue-600">✔</span> Visita técnica e informe de estado.
+            </li>
+            <li
+              class="flex items-center gap-2 text-base md:text-lg text-gray-800"
+            >
+              <span class="text-blue-600">✔</span> Mantenimiento preventivo programado.
+            </li>
+            <li
+              class="flex items-center gap-2 text-base md:text-lg text-gray-800"
+            >
+              <span class="text-blue-600">✔</span> Reparaciones y mantenimiento correctivo.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="pb-20">
+        <img
+          src={`${import.meta.env.BASE_URL}images/capacitacion.jpg`}
+          alt="Capacitación técnica sobre seguridad en racks industriales y almacenamiento"
+          class="w-full h-[300px] md:h-[500px] object-cover rounded-2xl shadow-lg"
+          loading="lazy"
+        />
+      </div>
+
+      <section class="max-w-4xl mb-20">
+        <h2 class="text-3xl md:text-4xl font-bold pb-4 text-gray-900">
+          Capacitaciones en Seguridad y Buenas Prácticas
+        </h2>
+        <p
+          class="text-base md:text-lg text-gray-700 leading-relaxed italic border-l-4 border-gray-200 pl-4"
+        >
+          Extendemos la vida útil de sus activos mediante el entrenamiento
+          especializado.
+        </p>
+        <p class="text-base md:text-lg text-gray-700 mt-4 leading-relaxed">
+          Contar con personal entrenado es vital para la conservación de sus
+          estructuras. Ofrecemos talleres constantes dirigidos al <strong
+            >buen uso, cuidado y buenas prácticas de almacenamiento</strong
+          >, reduciendo riesgos de accidentes y daños materiales en el almacén.
+        </p>
+      </section>
     </div>
-    <div class="bg-[#EBEFFF]">
-      <div class="max-w-[1200px] mx-auto px-5 py-10 py-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="flex flex-col justify-center">
-            <h3 class="text-4xl font-bold pb-2">Visitas técnicas</h3>
-            <p class="text-base md:text-lg">
-              Contamos con una área especializada encargada de programar y
-              realizar visitas técnicas con el fin de garantizar la operación
-              continua de nuestros clientes.
-            </p>
-            <p class="text-base md:text-lg">
-              Luego de cada visita técnica nuestros clientes reciben un informe
-              del estado actual de sus estructuras y la cantidad de posibles
-              piezas a reemplazar.
-            </p>
+
+    <section class="bg-[#F4F7FF] py-16 md:py-24">
+      <div class="max-w-[1200px] mx-auto px-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <h2 class="text-3xl md:text-4xl font-bold pb-6 text-gray-900">
+              Inspecciones y Visitas Técnicas de Seguridad
+            </h2>
+            <div class="space-y-4">
+              <p class="text-base md:text-lg text-gray-700">
+                Nuestro equipo de ingeniería programa visitas técnicas
+                periódicas para <strong
+                  >garantizar la continuidad operativa</strong
+                > de su logística sin interrupciones imprevistas.
+              </p>
+              <div class="bg-white p-5 rounded-lg shadow-sm">
+                <p class="text-base md:text-lg text-gray-800 font-medium">
+                  Al finalizar, entregamos un <strong
+                    >Informe Técnico Detallado</strong
+                  > con el diagnóstico estructural y el listado de componentes críticos
+                  a reemplazar, cumpliendo con estándares de seguridad industrial.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center order-1 md:order-2">
             <img
               src={`${import.meta.env.BASE_URL}images/visita-tecnica.jpeg`}
-              alt="visita-tecnica"
-              class="w-[450px] rounded-lg "
+              alt="Ingeniero realizando inspección técnica de racks industriales"
+              class="w-full max-w-[500px] rounded-2xl shadow-2xl border-8 border-white"
+              loading="lazy"
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 </MainLayout>

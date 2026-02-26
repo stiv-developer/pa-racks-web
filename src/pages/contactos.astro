@@ -4,101 +4,102 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <main>
-    <div class="relative">
-      <div>
-        <img
-          src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`}
-          alt="nosotros"
-          class="h-[400px] md:w-full h-full object-cover"
-        />
-      </div>
-      <div class="absolute inset-0 bg-black/40"></div>
+    <section class="relative h-[300px] md:h-[450px] lg:h-[550px] overflow-hidden">
+      <img
+        src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`} 
+        alt="Oficinas de atención y soporte técnico de R&A Racks en Lima"
+        class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+        loading="eager"
+        fetchpriority="high"
+      />
 
-      <div class="absolute bottom-[10%] left-[20%]">
-        <p class="text-5xl md:text-6xl font-bold text-white">Contáctanos</p>
-      </div>
-    </div>
-    <div class="formulario"></div>
-    <div class="max-w-[1200px] mx-auto px-5 py-10">
-      <div class="flex flex-col md:flex-row gap-10">
-        <div>
-          <img
-            src={`${import.meta.env.BASE_URL}images/Planta-JRM.jpg`}
-            alt=""
-          />
-        </div>
-        <div class="flex flex-col justify-center gap-4">
-          <!-- <div>
-            <p class="text-[#00388B] text-lg text-bold">Siguenos en:</p>
-            <div class="flex gap-2 my-2">
-              <div
-                class="flex items-center justify-center rounded-full bg-[#00388B] w-12 h-12 cursor-pointer"
-              >
-                <img
-                  src={`${import.meta.env.BASE_URL}images/iconos/facebook_w.svg`}
-                  alt="facebook"
-                  class="w-6 h-6"
-                />
-              </div>
-              <div
-                class="flex items-center justify-center rounded-full bg-[#00388B] w-12 h-12 cursor-pointer"
-              >
-                <img
-                  src={`${import.meta.env.BASE_URL}images/iconos/linkedin_w.svg`}
-                  alt="linkedin"
-                  class="w-6 h-6"
-                />
-              </div>
-              <div
-                class="flex items-center justify-center rounded-full bg-[#00388B] w-12 h-12 cursor-pointer"
-              >
-                <img
-                  src={`${import.meta.env.BASE_URL}images/iconos/youtube_w.svg`}
-                  alt="youtube"
-                  class="w-6 h-6"
-                />
-              </div>
-            </div>
-          </div> -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
-          <div>
-            <p class="text-[#00388B] text-lg text-bold">
-              Información de contacto:
-            </p>
-            <div class="flex items-start gap-2">
-              <img
-                src={`${import.meta.env.BASE_URL}images/iconos/phone_b.svg`}
-                alt="Teléfono"
-                class="w-5 h-5 mt-1"
-              />
-              <span>+51 923 808 882</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <img
-                src={`${import.meta.env.BASE_URL}images/iconos/mail_b.svg`}
-                alt="Email"
-                class="w-5 h-5 mt-1"
-              />
-              <span>hcavero@pyaracks.com</span>
-            </div>
-          </div>
+      <div class="absolute inset-0 flex items-end">
+        <div class="max-w-[1200px] mx-auto px-6 pb-12 w-full">
+          
+          <nav class="mb-4 flex items-center gap-2 text-blue-400 text-sm font-bold uppercase tracking-widest" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-white transition-colors">Inicio</a>
+            <span class="text-gray-500">/</span>
+            <span class="text-white/80">Atención al Cliente</span>
+          </nav>
 
-          <div>
-            <p class="text-[#00388B] text-lg text-bold">Dirección</p>
-            <div class="flex items-start gap-2">
-              <img
-                src={`${import.meta.env.BASE_URL}images/iconos/location_b.svg`}
-                alt="Email"
-                class="w-5 h-5 mt-1"
-              />
-              <span>CAL.4 MZA. E 5 LOTE. 9 A.H. BOCANEGRA PROV. CONST. DEL CALLAO - PROV. CONST. DEL CALLAO - CALLAO</span>
-            </div>
-          </div>
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-lg">
+            Contáctanos
+          </h1>
+
+          <div class="w-24 h-2 bg-blue-600 mt-6 rounded-full shadow-lg"></div>
+
+          <p class="text-gray-200 mt-6 text-lg md:text-xl max-w-2xl font-medium leading-relaxed drop-shadow-md">
+            Estamos listos para asesorarte en tus proyectos de almacenamiento y mantenimiento industrial. Solicita una cotización hoy mismo.
+          </p>
         </div>
       </div>
-    </div>
-    <div class="w-full">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62450.055383408006!2d-77.11502132246711!3d-11.965606695700533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce21b6748c45%3A0xece5fa25a5e8c4d5!2sLos%20Olivos!5e0!3m2!1ses!2spe!4v1771299827760!5m2!1ses!2spe" class="w-full h-[500px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    </section>
+
+    <section class="max-w-[1200px] mx-auto px-5 py-16 md:py-24">
+      <div class="flex flex-col md:flex-row gap-12 items-stretch">
+          
+          <div class="md:w-1/2 overflow-hidden rounded-2xl shadow-lg">
+              <img
+                  src={`${import.meta.env.BASE_URL}images/Planta-JRM.jpg`}
+                  alt="Planta de operaciones R&A Racks en Callao, Lima"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                  loading="lazy"
+              />
+          </div>
+
+          <div class="md:w-1/2 flex flex-col justify-center">
+              <h2 class="text-3xl font-bold text-gray-900 mb-8 border-l-4 border-[#00388B] pl-4 italic">
+                  Estamos listos para atenderte
+              </h2>
+
+              <div class="space-y-8">
+                  <div>
+                      <h3 class="text-[#00388B] text-sm font-bold uppercase tracking-widest mb-4">Canales Directos</h3>
+                      <div class="space-y-4">
+                          <a href="tel:+51923808882" class="flex items-center gap-4 group">
+                              <div class="bg-blue-50 p-3 rounded-full transition-colors">
+                                  <img src={`${import.meta.env.BASE_URL}images/iconos/phone_b.svg`} alt="Teléfono" class="w-6 h-6 transition-all"/>
+                              </div>
+                              <span class="text-lg md:text-xl font-medium text-gray-700 ">+51 923 808 882</span>
+                          </a>
+                          
+                          <a href="mailto:hcavero@pyaracks.com" class="flex items-center gap-4 group">
+                              <div class="bg-blue-50 p-3 rounded-full transition-colors">
+                                  <img src={`${import.meta.env.BASE_URL}images/iconos/mail_b.svg`} alt="Email" class="w-6 h-6 transition-all"/>
+                              </div>
+                              <span class="text-lg md:text-xl font-medium text-gray-700 break-all">hcavero@pyaracks.com</span>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="pt-6 border-t border-gray-100">
+                      <h3 class="text-[#00388B] text-sm font-bold uppercase tracking-widest mb-4">Oficina Principal</h3>
+                      <div class="flex items-start gap-4">
+                          <div class="bg-blue-50 p-3 rounded-full flex-shrink-0">
+                              <img src={`${import.meta.env.BASE_URL}images/iconos/location_b.svg`} alt="Ubicación" class="w-6 h-6"/>
+                          </div>
+                          <address class="not-italic text-gray-600 leading-relaxed text-sm md:text-base">
+                              CAL. 4 MZA. E-5 LOTE 9 A.H. BOCANEGRA<br/>
+                              PROV. CONST. DEL CALLAO - CALLAO, PERÚ
+                          </address>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+<div class="w-full h-[400px] md:h-[550px] bg-gray-200 grayscale hover:grayscale-0 transition-all duration-700">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15609.610191834167!2d-77.108252!3d-12.01579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cb7999719391%3A0xc39527c328e3b070!2sBocanegra%2C%20Callao!5e0!3m2!1ses!2spe!4v1700000000000!5m2!1ses!2spe" 
+        class="w-full h-full border-0" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+  
   </main>
 </MainLayout>

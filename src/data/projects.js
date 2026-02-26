@@ -37,7 +37,7 @@ export const projects = [
         area: ""
     },
     {
-        slug: "instalación-y-armado-de-mini-racks",
+        slug: "instalacion-y-armado-de-mini-racks",
         title: "Instalación y Armado de Mini Racks en Huachipa",
         sub_title: "Implementamos una solución de almacenamiento versátil diseñada para la carga manual y picking dinámico, maximizando el aprovechamiento del espacio vertical en almacenes de media y baja rotación.",
         items: [

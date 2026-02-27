@@ -14,98 +14,147 @@ const { project } = Astro.props;
 
 <MainLayout>
   <main>
-    <section class="relative h-[250px] md:h-[350px] lg:h-[600px] overflow-hidden">
+    <section class="relative h-[400px] lg:h-[650px] overflow-hidden">
       <img
         src={`${import.meta.env.BASE_URL}${project.image}`}
-        alt={project.title}
-        class="w-full h-full object-cover"
+        alt={`Sistema de almacenamiento: ${project.title}`}
+        class="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-110"
+        loading="eager"
+        fetchpriority="high"
       />
 
-      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
 
       <div class="absolute inset-0 flex items-end">
-        <div class="max-w-[1200px] mx-auto px-6 pb-10 w-full flex flex-col md:flex-row justify-between gap-4 md:gap-0">
+        <div class="max-w-[1200px] mx-auto px-6 pb-16 w-full">
+
+          <nav class="mb-6 flex items-center gap-2 text-blue-400 text-xs md:text-sm font-bold uppercase tracking-widest" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-white transition-colors text-gray-300">Inicio</a>
+            <span class="text-gray-500">/</span>
+            <a href={`${import.meta.env.BASE_URL}sistemas-de-almacenamiento`} class="hover:text-white transition-colors text-gray-300">Sistemas</a>
+            <span class="text-gray-500">/</span>
+            <span class="text-white">{project.title}</span>
+          </nav>
           
-          <h1 class="text-3xl md:text-5xl font-bold text-white">{project.title}</h1>
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight drop-shadow-2xl max-w-4xl uppercase">
+            {project.title}
+          </h1>
           
-          <button class="bg-[#FFA100] text-lg text-white font-semibold px-4 py-2">Descargar brochure</button>
-       
+          <div class="w-20 h-1.5 bg-blue-600 mt-4 mb-6 rounded-full"></div>
+
+          <p class="text-gray-200 text-base md:text-xl max-w-3xl leading-relaxed mb-8 drop-shadow-md font-medium">
+            {project.heroText}
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-[#FFA100] hover:bg-[#e69100] text-white font-bold px-8 py-3 rounded-md transition-all flex items-center gap-2 shadow-lg transform hover:-translate-y-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Descargar Brochure Técnico
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="max-w-[1200px] mx-auto px-5 py-10 md:py-[100px]">
-      <h2 class="text-lg md:text-xl font-bold text-gray-800 leading-relaxed">{project.description}</h2>
+    <section class="max-w-[1200px] mx-auto px-5 py-16 md:py-24 border-b border-gray-100">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <div class="lg:col-span-7">
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-6">
+                  Definición y alcance del sistema
+              </h2>
+              <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                  {project.description}
+              </p>
+          </div>
 
-      <div>
-        <ul class="py-4">
+          <div class="lg:col-span-5 bg-gray-50 p-8 rounded-2xl border border-gray-100">
+              <h3 class="text-[#00388B] font-bold uppercase tracking-widest text-sm mb-6">
+                  Configuraciones Disponibles
+              </h3>
+              <ul class="space-y-4">
+                  {project.items?.map((item) => (
+                      <li class="flex gap-3 items-center group">
+                          <img src={`${import.meta.env.BASE_URL}images/iconos/check-b.svg`} alt="check" class="w-5 h-5"/>
+                          <span class="text-base md:text-lg text-gray-700 font-medium">{item}</span>
+                      </li>
+                  ))}
+              </ul>
+          </div>
 
-          {project.items?.map((item) => (
-            <li class="flex gap-2 items-center py-2">
-
-              <img src={`${import.meta.env.BASE_URL}images/iconos/check-b.svg`} alt="check" class="w-5 h-5"/>
-              <p class="text-base md:text-xl text-gray-600">{item}</p>
-
-            </li>
-          ))}
-
-        </ul>
       </div>
     </section>
 
-    <section class="max-w-[1200px] mx-auto p-6">
-      <div class="relative">
-
-        <div class="overflow-hidden">
+    <section class="max-w-[1200px] mx-auto p-4 md:p-6">
+      <div class="relative w-full aspect-video md-h-[600px] overflow-hidden rounded-lg bg-gray-100">
           <img id="mainImage"
             src={`${import.meta.env.BASE_URL}${project.detail_image[0]}`}
-            class="w-full h-full md:h-[600px] object-cover"
+            class="w-full h-full object-cover transition-opacity duration-500"
             alt={`${project.detail_image[0]}`}
           />
-        </div>
       </div>
 
       <div class="flex justify-between">
 
-        <button id="prevBtn" class="text-2xl md:text-6xl font-bold"> ❮ </button>
+        <button id="prevBtn" class="nav-btn"> ❮ </button>
 
-      <div id="thumbnails" class="flex gap-4 mt-4 overflow-x-auto">
-        {project.detail_image?.map((img, index) => (
-          <img
-            src={`${import.meta.env.BASE_URL}${img}`}
-            class={`thumb ${index === 0 ? "active-thumb" : ""}` }
-            alt={`${img}`}
-          />
-        ))}
-      </div>
+        <div id="thumbnails" class="flex gap-2 overflow-x-auto scroll-smooth no-scrollbar py-2">
+          {project.detail_image?.map((img, index) => (
+            <img
+              src={`${import.meta.env.BASE_URL}${img}`}
+              class={`thumb ${index === 0 ? "active-thumb" : ""}` }
+              alt={`${img}`}
+              data-index={index}
+            />
+          ))}
+        </div>
 
-        <button id="nextBtn" class="text-2xl md:text-6xl font-bold"> ❯</button>
+        <button id="nextBtn" class="nav-btn"> ❯</button>
 
       </div>
     </section>
 
-    <section class="max-w-[1200px] mx-auto px-5 py-10 md:py-[100px]">
-      <h2 class="text-2xl md:text-4xl font-bold py-4">
-        Características y beneficios
-      </h2>
+    <section class="max-w-[1200px] mx-auto px-5 py-16 md:py-24 bg-white">
+      <div class="mb-12">
+          <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-tight">
+              Características <span class="text-[#00388B]">&</span> Beneficios
+          </h2>
+          <div class="w-20 h-1.5 bg-[#FFA100] rounded-full"></div>
+      </div>
 
-      <ul class="flex flex-col gap-3">
-        {project.characteristicsBenefits?.map((benefit) => (
-          <li class="flex gap-2 items-start">
-            <div class="bg-[#FFA100] w-2 h-2 rounded-full mt-2"></div>
-            <p class="text-base md:text-xl text-gray-600">
-              {benefit}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+          {project.characteristicsBenefits?.map((benefit) => (
+              <div class="flex gap-4 items-start group p-4 rounded-xl hover:bg-gray-50 transition-colors duration-300">
+                  <div class="flex-shrink-0 mt-1.5">
+                      <div class="bg-[#FFA100] w-3 h-3 rounded-full shadow-[0_0_10px_rgba(255,161,0,0.5)] group-hover:scale-125 transition-transform"></div>
+                  </div>
+                  
+                  <p class="text-base md:text-lg text-gray-700 leading-relaxed font-medium">
+                      {benefit}
+                  </p>
+              </div>
+          ))}
+      </div>
+
+      <div class="mt-16 p-8 bg-[#00388B] rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+          <p class="text-white text-xl md:text-2xl font-bold text-center md:text-left">
+              ¿Necesita una configuración especial para su almacén?
+          </p>
+          <a href={`${import.meta.env.BASE_URL}contactos`} 
+            class="px-8 py-3 bg-[#FFA100] hover:bg-[#e69100] text-white font-bold rounded-lg transition-all transform hover:scale-105 shadow-lg whitespace-nowrap">
+              Consultar con un Especialista
+          </a>
+      </div>
     </section>
   </main>
 </MainLayout>
 
 <style>
+  /* Evita que las miniaturas se encojan y define tamaño fijo */
   .thumb {
-    @apply w-[120px] h-[80px] object-cover cursor-pointer opacity-60 transition duration-300;
+    @apply w-[80px] h-[60px] md:w-[120px] md:h-[80px] flex-shrink-0 object-cover cursor-pointer opacity-50 transition-all duration-300 rounded-md border-2 border-transparent;
   }
 
   .thumb:hover {
@@ -113,13 +162,28 @@ const { project } = Astro.props;
   }
 
   .active-thumb {
-    @apply opacity-100 ring-2 ring-white;
+    @apply opacity-100 border-blue-600 scale-105;
+  }
+
+  /* Botones de navegación */
+  .nav-btn {
+    @apply text-2xl md:text-4xl px-2 py-1 text-gray-600 hover:text-black transition-colors;
+  }
+
+  /* Ocultar scrollbar pero mantener funcionalidad */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 </style>
 
 <script>
   const mainImage = document.getElementById("mainImage");
   const thumbnails = document.querySelectorAll(".thumb");
+  const thumbContainer = document.getElementById("thumbContainer");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
 
@@ -127,16 +191,26 @@ const { project } = Astro.props;
 
   function updateImage(index) {
     currentIndex = index;
-    mainImage.src = thumbnails[index].src;
+    const selectedThumb = thumbnails[index];
 
+    // Cambio de imagen con efecto suave
+    mainImage.style.opacity = "0.7";
+    setTimeout(() => {
+        mainImage.src = selectedThumb.src;
+        mainImage.style.opacity = "1";
+    }, 100);
+
+    // Actualizar clases de miniaturas
     thumbnails.forEach(t => t.classList.remove("active-thumb"));
-    thumbnails[index].classList.add("active-thumb");
+    selectedThumb.classList.add("active-thumb");
+
+    // Centrar automáticamente la miniatura activa en el scroll
+    const scrollOffset = selectedThumb.offsetLeft - (thumbContainer.offsetWidth / 2) + (selectedThumb.offsetWidth / 2);
+    thumbContainer.scrollTo({ left: scrollOffset, behavior: 'smooth' });
   }
 
   thumbnails.forEach((thumb, index) => {
-    thumb.addEventListener("click", () => {
-      updateImage(index);
-    });
+    thumb.addEventListener("click", () => updateImage(index));
   });
 
   prevBtn.addEventListener("click", () => {

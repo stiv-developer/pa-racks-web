@@ -2,6 +2,7 @@ export const projects = [
   {
     title: "RACK SELECTIVO",
     slug: "rack-selectivo",
+    heroText:"Optimice el acceso y control de su inventario con el sistema más versátil del mercado.",
     category: "pesada",
     description:
       "Sistema de almacenamiento industrial para pallets que ofrece acceso directo e independiente a cada unidad de carga. Es la solución más utilizada en almacenes y centros de distribución por su versatilidad, eficiencia operativa y excelente control de inventarios.",
@@ -29,6 +30,7 @@ export const projects = [
   {
     title: "RACK ACUMULATIVO",
     slug: "rack-acumulativo",
+    heroText:"",
     category: "pesada",
     description:
       "Sistema de almacenamiento compacto diseñado para maximizar el aprovechamiento del espacio en almacenes industriales. Permite almacenar pallets por acumulación, reduciendo pasillos y aumentando significativamente la capacidad de almacenamiento. Ideal para productos homogéneos y grandes volúmenes.",
@@ -58,6 +60,7 @@ export const projects = [
   {
     title: "CANTILEVER",
     slug: "cantilever",
+    heroText:"",
     category: "pesada",
     description:
       "Sistema de almacenamiento diseñado para cargas largas, pesadas o voluminosas como tubos, perfiles metálicos, madera, planchas y estructuras especiales. Su diseño con brazos en voladizo permite un acceso frontal total y una manipulación segura con montacargas.",
@@ -87,6 +90,7 @@ export const projects = [
   {
     title: "RACK AUTOPORTANTE",
     slug: "rack-autoportante",
+    heroText:"",
     category: "pesada",
     description:
       "Sistema estructural que integra racks como soporte principal del edificio. Ideal para centros logísticos de gran altura y almacenamiento automatizado.",
@@ -112,6 +116,7 @@ export const projects = [
   {
     title: "MINI RACK",
     slug: "mini-rack",
+    heroText:"",
     category: "semi",
     description:
       "Sistema de almacenamiento manual diseñado para cargas medianas y picking directo. Ideal para almacenes, talleres, depósitos y centros de distribución que requieren organización eficiente y acceso rápido a productos.",
@@ -140,6 +145,7 @@ export const projects = [
   {
     title: "ENTREPISO RACK / ESTANTERIA",
     slug: "entrepiso-rack-estanteria",
+    heroText:"",
     category: "semi",
     description:
       "Sistema que aprovecha la altura del almacén creando niveles adicionales de almacenamiento. Incrementa la capacidad sin necesidad de ampliar infraestructura.",
@@ -168,6 +174,7 @@ export const projects = [
   {
     title: "ESTANTERÍA METALICA FIJA",
     slug: "estanteria-metalica-fija",
+    heroText:"",
     category: "ligera",
     description:
       "Estantería modular para almacenamiento liviano. Ideal para archivos, repuestos y productos de baja carga con acceso manual rápido y organizado.",
@@ -193,6 +200,7 @@ export const projects = [
   {
     title: "ESTANTERÍA METALICA MOVIL",
     slug: "estanteria-metalica-movil",
+    heroText:"",
     category: "ligera",
     description:
       "Sistema de almacenamiento compacto con estanterías montadas sobre rieles móviles que eliminan pasillos fijos, permitiendo un máximo aprovechamiento del espacio. Ideal para archivos, bibliotecas y depósitos con espacio limitado.",
@@ -219,6 +227,7 @@ export const projects = [
   {
     title: "MEZZANINE ESTRUCTURAL",
     slug: "mezzanine-estructural",
+    heroText:"",
     category: "especial",
     description:
       "Plataforma estructural diseñada para ampliar áreas operativas dentro de almacenes o plantas industriales. Solución ideal para oficinas, almacenamiento o producción.",

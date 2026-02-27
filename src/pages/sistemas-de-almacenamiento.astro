@@ -116,70 +116,70 @@ const projects = [
 
     <div class="max-w-[1200px] mx-auto px-5 py-16">
   
-  <div class="text-center mb-12">
-    <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Nuestro Catálogo de Soluciones</h2>
-    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-      Seleccione el tipo de carga para encontrar el sistema de almacenamiento que mejor se adapte a su operativa logística.
-    </p>
-  </div>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Nuestro Catálogo de Soluciones</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+          Seleccione el tipo de carga para encontrar el sistema de almacenamiento que mejor se adapte a su operativa logística.
+        </p>
+      </div>
 
-  <div class="flex flex-wrap justify-center gap-3 mb-12 bg-gray-50 p-2 rounded-2xl border border-gray-100 shadow-sm">
-    <button data-filter="pesada" class="filter-btn active-btn">
-      <span class="hidden md:inline">🏗️</span> Carga Pesada
-    </button>
-    <button data-filter="semi" class="filter-btn">
-      <span class="hidden md:inline">📦</span> Carga Semipesada
-    </button>
-    <button data-filter="ligera" class="filter-btn">
-      <span class="hidden md:inline">📄</span> Carga Ligera
-    </button>
-    <button data-filter="especial" class="filter-btn">
-      <span class="hidden md:inline">⚙️</span> Estructuras Especiales
-    </button>
-  </div>
+      <div class="flex flex-wrap justify-center gap-3 mb-12 bg-gray-50 p-2 rounded-2xl border border-gray-100 shadow-sm">
+        <button data-filter="pesada" class="filter-btn active-btn">
+          <span class="hidden md:inline">🏗️</span> Carga Pesada
+        </button>
+        <button data-filter="semi" class="filter-btn">
+          <span class="hidden md:inline">📦</span> Carga Semipesada
+        </button>
+        <button data-filter="ligera" class="filter-btn">
+          <span class="hidden md:inline">📄</span> Carga Ligera
+        </button>
+        <button data-filter="especial" class="filter-btn">
+          <span class="hidden md:inline">⚙️</span> Estructuras Especiales
+        </button>
+      </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[600px]" id="projects-container">
-    {projects.map((project) => (
-      <article 
-        class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 flex flex-col border border-gray-100"
-        data-category={project.category}
-      >
-        <div class="relative overflow-hidden h-[240px]">
-          <div class="absolute top-4 left-4 z-10">
-             <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
-               {project.category === 'pesada' ? 'Industrial' : project.category}
-             </span>
-          </div>
-          <img
-            src={`${import.meta.env.BASE_URL}${project.image}`}
-            alt={`Instalación de ${project.title} - R&A Racks Perú`}
-            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            loading="lazy"
-          />
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[600px]" id="projects-container">
+        {projects.map((project) => (
+          <article 
+            class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 flex flex-col border border-gray-100"
+            data-category={project.category}
+          >
+            <div class="relative overflow-hidden h-[240px]">
+              <div class="absolute top-4 left-4 z-10">
+                <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
+                  {project.category === 'pesada' ? 'Industrial' : project.category}
+                </span>
+              </div>
+              <img
+                src={`${import.meta.env.BASE_URL}${project.image}`}
+                alt={`Instalación de ${project.title} - R&A Racks Perú`}
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+              />
+            </div>
 
-        <div class="p-8 flex flex-col flex-grow">
-          <h3 class="text-2xl font-extrabold text-[#00388B] mb-4 group-hover:text-blue-600 transition-colors uppercase leading-tight">
-            {project.title}
-          </h3>
-          <p class="text-gray-600 leading-relaxed mb-8 text-sm flex-grow">
-            {project.description}
-          </p>
-          
-          <div class="mt-auto border-t border-gray-50 pt-6">
-            <a href={`/racks-industriales/${project.slug}`} 
-               class="inline-flex items-center gap-2 text-blue-600 font-bold text-base hover:gap-4 transition-all">
-               Ficha Técnica y Detalles
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
-                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-               </svg>
-            </a>
-          </div>
-        </div>
-      </article>
-    ))}
-  </div>
-</div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="text-2xl font-extrabold text-[#00388B] mb-4 group-hover:text-blue-600 transition-colors uppercase leading-tight">
+                {project.title}
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-8 text-sm flex-grow">
+                {project.description}
+              </p>
+              
+              <div class="mt-auto border-t border-gray-50 pt-6">
+                <a href={`/racks-industriales/${project.slug}`} 
+                  class="inline-flex items-center gap-2 text-blue-600 font-bold text-base hover:gap-4 transition-all">
+                  Ficha Técnica y Detalles
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
   </main>
 </MainLayout>
 

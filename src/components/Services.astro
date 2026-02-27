@@ -1,78 +1,74 @@
-<section class="py-20 px-5 flex justify-center bg-gray-50">
-
+<section class="py-20 px-5 flex justify-center bg-gray-50/50">
   <div class="w-full max-w-[1250px]">
-
-    <!-- Título de sección -->
-    <header class="text-center mb-12 bg-[#00388B] py-5 md:py-10 px-3">
-      <h2 class="text-start font-bold text-4xl md:text-5xl text-white">
-        Nuestras Soluciones
+    
+    <header class="mb-12 border-l-8 border-[#FFA100] pl-6 md:pl-10">
+      <h2 class="font-black text-4xl md:text-6xl text-[#00388B] uppercase tracking-tighter">
+        Nuestras <span class="text-gray-800">Soluciones</span>
       </h2>
-      <p class="text-start font-base text-lg md:text-xl text-white pt-2">
-        Ofrecemos soluciones integrales en almacenamiento industrial y mantenimiento,
-        adaptadas a las necesidades de cada cliente.
+      <p class="font-medium text-lg md:text-2xl text-gray-600 max-w-3xl mt-4 leading-relaxed">
+        Ingeniería aplicada al almacenamiento y protección de infraestructura industrial, 
+        diseñada para la máxima operatividad.
       </p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:h-[600px]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:h-[650px]">
 
-      <!-- CARD 1 -->
-      <article class="relative overflow-hidden rounded-2xl shadow-md group">
-
-        <a href="/sistemas-de-almacenamiento" class="block h-full">
-
+      <article class="relative overflow-hidden rounded-3xl shadow-xl group cursor-pointer">
+        <a href="/sistemas-de-almacenamiento" class="block h-full group">
           <img 
             src={`${import.meta.env.BASE_URL}images/almacenamiento.jpeg`} 
-            alt="Sistemas de almacenamiento industrial"
-            class="w-full h-full object-cover object-bottom transition-transform duration-700 group-hover:scale-110"
+            alt="Diseño e instalación de sistemas de almacenamiento industrial y racks"
+            class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-110"
             loading="lazy"
           >
 
-          <!-- Overlay elegante -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#00388B]/90 via-black/20 to-transparent transition-opacity duration-500 group-hover:via-[#00388B]/40"></div>
 
-          <!-- Contenido -->
-          <div class="absolute bottom-8 left-8 text-white">
-            <h3 class="text-2xl md:text-3xl font-bold">
-              Almacenamiento
+          <div class="absolute bottom-10 left-10 right-10 text-white z-20">
+            <span class="bg-[#FFA100] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">
+              Eficiencia Logística
+            </span>
+            <h3 class="text-3xl md:text-4xl font-black uppercase leading-none">
+              Sistemas de <br/> Almacenamiento
             </h3>
-            <p class="mt-2 opacity-0 group-hover:opacity-100 transition duration-500">
-              Ver soluciones →
-            </p>
+            <div class="mt-6 flex items-center gap-3 text-white font-bold transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+               <span class="border-b-2 border-[#FFA100] pb-1 uppercase text-sm tracking-wider">Explorar Soluciones</span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#FFA100]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+               </svg>
+            </div>
           </div>
-
         </a>
-
       </article>
 
-      <!-- CARD 2 -->
-      <article class="relative overflow-hidden rounded-2xl shadow-md group">
-
-        <a href="/mantenimiento-de-techos" class="block h-full">
-
+      <article class="relative overflow-hidden rounded-3xl shadow-xl group cursor-pointer">
+        <a href="/mantenimiento-de-techos" class="block h-full group">
           <img 
             src={`${import.meta.env.BASE_URL}images/mantenimiento-de-techo.jpeg`}  
-            alt="Servicio de mantenimiento de techos industriales"
-            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            alt="Servicio preventivo y correctivo de mantenimiento de techos industriales"
+            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
             loading="lazy"
           >
 
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-black/20 to-transparent transition-opacity duration-500 group-hover:via-gray-900/40"></div>
 
-          <div class="absolute bottom-8 left-8 text-white">
-            <h3 class="text-2xl md:text-3xl font-bold">
-              Mantenimiento de Techos
+          <div class="absolute bottom-10 left-10 right-10 text-white z-20">
+            <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">
+              Protección de Activos
+            </span>
+            <h3 class="text-3xl md:text-4xl font-black uppercase leading-none">
+              Mantenimiento <br/> de Techos
             </h3>
-            <p class="mt-2 opacity-0 group-hover:opacity-100 transition duration-500">
-              Ver servicio →
-            </p>
+            <div class="mt-6 flex items-center gap-3 text-white font-bold transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+               <span class="border-b-2 border-blue-500 pb-1 uppercase text-sm tracking-wider">Ver Servicios</span>
+               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+               </svg>
+            </div>
           </div>
-
         </a>
-
       </article>
 
     </div>
-
   </div>
-
 </section>

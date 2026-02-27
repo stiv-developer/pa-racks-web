@@ -79,84 +79,127 @@ const projects = [
 
 <MainLayout>
   <main>
-    <div class="relative">
-      <div>
-        <img
-          src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`}
-          alt="nosotros"
-          class="h-[400px] md:w-full h-full object-cover"
-        />
+    <section class="relative h-[400px] lg:h-[600px] overflow-hidden">
+      <img
+        src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`}
+        alt="Sistemas de almacenamiento industrial y racks metálicos para logística"
+        class="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-110"
+        loading="eager"
+        fetchpriority="high"
+      />
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+
+      <div class="absolute inset-0 flex items-end">
+        <div class="max-w-[1200px] mx-auto px-6 pb-12 w-full">
+
+          <nav class="mb-4 flex items-center gap-2 text-blue-400 text-xs md:text-sm font-bold uppercase tracking-widest" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-white transition-colors">Inicio</a>
+            <span class="text-gray-500">/</span>
+            <a href={`${import.meta.env.BASE_URL}negocios`} class="hover:text-white transition-colors">Negocios</a>
+            <span class="text-gray-500">/</span>
+            <span class="text-white/80">Sistemas de Almacenamiento</span>
+          </nav>
+
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-lg max-w-4xl">
+            Sistemas de Almacenamiento e Ingeniería Logística
+          </h1>
+
+          <div class="w-24 h-2 bg-blue-600 mt-6 rounded-full shadow-lg shadow-blue-900/50"></div>
+
+          <p class="text-gray-200 mt-6 text-lg md:text-xl max-w-3xl font-medium leading-relaxed drop-shadow-md">
+            Diseñamos soluciones eficientes con racks industriales para todo tipo de cargas, optimizando la capacidad y operatividad de su almacén.
+          </p>
+        </div>
       </div>
-      <div class="absolute inset-0 bg-black/40"></div>
+    </section>
 
-      <div class="absolute bottom-[10%] left-[5%] md:left-[20%]">
-        <p class="text-3xl md:text-6xl font-bold text-white">
-          Sistemas de Almacenamiento
-        </p>
-        <p class="text-2xl md:text-3xl font-medium text-white">
-          Racks para todo tipo de cargas y equipamiento de almacenes
-        </p>
-      </div>
-    </div>
+    <div class="max-w-[1200px] mx-auto px-5 py-16">
+  
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Nuestro Catálogo de Soluciones</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+      Seleccione el tipo de carga para encontrar el sistema de almacenamiento que mejor se adapte a su operativa logística.
+    </p>
+  </div>
 
-    <div class="max-w-[1200px] mx-auto px-5 py-10">
-      <div class="grid md:grid-cols-4 gap-3 shadow-2xl p-4">
+  <div class="flex flex-wrap justify-center gap-3 mb-12 bg-gray-50 p-2 rounded-2xl border border-gray-100 shadow-sm">
+    <button data-filter="pesada" class="filter-btn active-btn">
+      <span class="hidden md:inline">🏗️</span> Carga Pesada
+    </button>
+    <button data-filter="semi" class="filter-btn">
+      <span class="hidden md:inline">📦</span> Carga Semipesada
+    </button>
+    <button data-filter="ligera" class="filter-btn">
+      <span class="hidden md:inline">📄</span> Carga Ligera
+    </button>
+    <button data-filter="especial" class="filter-btn">
+      <span class="hidden md:inline">⚙️</span> Estructuras Especiales
+    </button>
+  </div>
 
-      <button data-filter="pesada" class="filter-btn active-btn">
-        Estructura para carga pesada
-      </button>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[600px]" id="projects-container">
+    {projects.map((project) => (
+      <article 
+        class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 flex flex-col border border-gray-100"
+        data-category={project.category}
+      >
+        <div class="relative overflow-hidden h-[240px]">
+          <div class="absolute top-4 left-4 z-10">
+             <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
+               {project.category === 'pesada' ? 'Industrial' : project.category}
+             </span>
+          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}${project.image}`}
+            alt={`Instalación de ${project.title} - R&A Racks Perú`}
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
+          />
+        </div>
 
-      <button data-filter="semi" class="filter-btn">
-        Estructura para carga semi pesada
-      </button>
-
-      <button data-filter="ligera" class="filter-btn">
-        Estructura para carga ligera
-      </button>
-
-      <button data-filter="especial" class="filter-btn">
-        Estructura especiales
-      </button>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 mb-[180px]" id="projects-container">
-        {
-          projects.map((project) => (
-            <div 
-              class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-              data-category={project.category}
-            >
-              <div class="overflow-hidden h-[260px]">
-                <img
-                  src={`${import.meta.env.BASE_URL}${project.image}`}
-                  alt={project.title}
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-
-              <div class="p-6">
-                <p class="text-2xl font-bold mb-3">
-                  {project.title}
-                </p>
-                <p class="text-gray-600 leading-relaxed mb-6">
-                  {project.description}
-                </p>
-                <a href={`/racks-industriales/${project.slug}`} class="inline-flex items-center gap-2 text-blue-600 font-semibold text-lg group-hover:gap-3 transition-all" > Conoce más <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" > <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /> </svg> </a>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
+        <div class="p-8 flex flex-col flex-grow">
+          <h3 class="text-2xl font-extrabold text-[#00388B] mb-4 group-hover:text-blue-600 transition-colors uppercase leading-tight">
+            {project.title}
+          </h3>
+          <p class="text-gray-600 leading-relaxed mb-8 text-sm flex-grow">
+            {project.description}
+          </p>
+          
+          <div class="mt-auto border-t border-gray-50 pt-6">
+            <a href={`/racks-industriales/${project.slug}`} 
+               class="inline-flex items-center gap-2 text-blue-600 font-bold text-base hover:gap-4 transition-all">
+               Ficha Técnica y Detalles
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+               </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</div>
   </main>
 </MainLayout>
 
 <style>
   .filter-btn {
-    @apply p-4 rounded-lg bg-[#D4DAF5] font-bold cursor-pointer transition-all;
+    @apply px-6 py-3 rounded-xl bg-white text-gray-500 font-bold text-sm md:text-base border border-gray-200 transition-all duration-300 hover:border-blue-400 hover:text-blue-600 flex items-center gap-2;
   }
 
   .active-btn {
-    @apply bg-[#00388B] text-white;
+    @apply bg-[#00388B] text-white border-[#00388B] shadow-lg shadow-blue-900/20;
+  }
+
+  /* Animación de entrada para las cards */
+  @keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .project-card[style*="display: block"] {
+    animation: fadeInScale 0.4s ease forwards;
   }
 </style>
 

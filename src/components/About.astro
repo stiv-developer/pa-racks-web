@@ -1,25 +1,68 @@
-<section class="flex justify-center items-center my-16 mx-4 md:mx-0">
+<section class="py-16 md:py-24 flex justify-center bg-white overflow-hidden">
+  <div class="max-w-[1250px] w-full px-5">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <div class="relative group">
+        <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-50 rounded-full z-0 animate-pulse"></div>
+        <img 
+          src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`} 
+          alt="Equipo de P&A Racks trabajando en soluciones de almacenamiento industrial" 
+          class="relative z-10 rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 object-cover h-[400px] md:h-[550px] w-full"
+        />
+        <div class="absolute -bottom-6 -right-6 bg-[#00388B] p-8 rounded-2xl shadow-xl z-20 hidden md:block">
+          <p class="text-white font-black text-4xl leading-none italic">+10</p>
+          <p class="text-blue-200 text-xs uppercase tracking-widest mt-1">Años de <br/> experiencia</p>
+        </div>
+      </div>
 
-  <div class="grid grid-cols-1 w-full max-w-[1250px] gap-10 items-center">
+      <div class="flex flex-col space-y-8">
+        <div>
+          <h2 class="text-[#00388B] font-black text-4xl md:text-5xl uppercase tracking-tighter leading-tight">
+            Ingeniería que impulsa <br/> <span class="text-gray-400 font-light italic">su crecimiento</span>
+          </h2>
+          <div class="w-20 h-2 bg-[#FFA100] mt-4"></div>
+        </div>
 
-    <!-- <div class="flex justify-center md:justify-start">
-      <img src={`${import.meta.env.BASE_URL}images/mapa.svg`} alt="Mapa de presencia internacional" class="w-full max-w-[600px] md:h-[700px] object-contain">
-    </div> -->
+        <div class="space-y-6">
+          <p class="text-gray-700 text-lg md:text-xl leading-relaxed">
+            En <strong>P&A RACKS S.A.C.</strong> somos especialistas en la fabricación, instalación y mantenimiento de estructuras metálicas, 
+            diseñadas para optimizar espacios y garantizar la máxima **seguridad estructural**.
+          </p>
 
-    <div class="flex flex-col justify-center space-y-6">
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="flex items-center gap-3 group">
+              <div class="w-2 h-2 bg-[#00388B] rounded-full group-hover:scale-150 transition-transform"></div>
+              <span class="font-bold text-gray-800 uppercase text-sm tracking-wide">Sector Retail</span>
+            </div>
+            <div class="flex items-center gap-3 group">
+              <div class="w-2 h-2 bg-[#00388B] rounded-full group-hover:scale-150 transition-transform"></div>
+              <span class="font-bold text-gray-800 uppercase text-sm tracking-wide">Agroindustrial</span>
+            </div>
+            <div class="flex items-center gap-3 group">
+              <div class="w-2 h-2 bg-[#00388B] rounded-full group-hover:scale-150 transition-transform"></div>
+              <span class="font-bold text-gray-800 uppercase text-sm tracking-wide">Sector Pesquero</span>
+            </div>
+            <div class="flex items-center gap-3 group">
+              <div class="w-2 h-2 bg-[#00388B] rounded-full group-hover:scale-150 transition-transform"></div>
+              <span class="font-bold text-gray-800 uppercase text-sm tracking-wide">Minería</span>
+            </div>
+          </div>
 
-      <p class="text-xl">
-        En P&A RACKS S.A.C. somos especialistas en la fabricación, instalación y mantenimiento de racks para almacenes, 
-        brindando soluciones integrales de almacenamiento diseñadas para optimizar espacios, 
-        mejorar la eficiencia operativa y garantizar máxima seguridad estructural en entornos industriales. 
-        Desarrollamos proyectos para centros de distribución, almacenes logísticos y empresas de los sectores retail, agroindustrial,
-        pesquero y minero, trabajando bajo altos estándares de calidad y cumplimiento de normativas técnicas. 
-        Además, ofrecemos reforzamiento y ampliación de estructuras existentes, así como servicios generales industriales, 
-        comprometidos siempre con la innovación, la durabilidad y el crecimiento sostenible de nuestros clientes.
-      </p>
+          <p class="text-gray-600 text-base italic border-l-4 border-gray-200 pl-4 py-2">
+            Comprometidos con la innovación, la durabilidad y el cumplimiento estricto de las normativas técnicas nacionales.
+          </p>
+        </div>
+
+        <div class="pt-4">
+          <a href="/nosotros" class="inline-flex items-center gap-3 text-[#00388B] font-black uppercase tracking-widest text-sm hover:gap-5 transition-all">
+            Conocer nuestra trayectoria
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
 
     </div>
-
   </div>
-
 </section>

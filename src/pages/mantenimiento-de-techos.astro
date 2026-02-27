@@ -1,0 +1,101 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+    <main>
+        <section class="relative h-[400px] md:h-[450px] lg:h-[600px] overflow-hidden">
+            <img src={`${import.meta.env.BASE_URL}images/img-proyectos/mantenimiento-de-techo/mantenimiento-de-techo-7.jpeg`} 
+                alt="Servicio especializado de mantenimiento de techos industriales y coberturas"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="eager"
+                fetchpriority="high">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div class="absolute inset-0 flex items-end">
+                <div class="max-w-[1200px] mx-auto px-6 pb-12 w-full">
+                    <nav class="mb-4 flex items-center gap-2 text-blue-400 text-sm font-semibold uppercase tracking-widest" aria-label="Breadcrumb">
+                        <a href={`${import.meta.env.BASE_URL}negocios`} class="hover:text-white transition-colors">Negocios</a>
+                        <span class="text-gray-400">/</span>
+                        <span class="text-white/80">Servicios Industriales</span>
+                    </nav>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-lg max-w-4xl">
+                        Mantenimiento de Techos y Coberturas Industriales
+                    </h1>
+                    <div class="w-24 h-2 bg-blue-600 mt-6 rounded-full shadow-lg"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-[1200px] mx-auto px-5 py-16 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Protegemos su infraestructura de las inclemencias del clima</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        En <strong>P&A Racks</strong>, entendemos que un techo en mal estado pone en riesgo su mercadería y la seguridad de su personal. Ofrecemos soluciones integrales para la recuperación y protección de techos industriales, almacenes y plantas de producción.
+                    </p>
+                    <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600">
+                        <p class="text-blue-900 font-medium">Especialistas en tratamiento de corrosión marina y sellado hermético para zonas críticas como Callao y Chorrillos.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-6 bg-white shadow-xl rounded-2xl text-center">
+                        <span class="text-blue-600 text-4xl font-bold block mb-2">0%</span>
+                        <p class="text-sm font-bold text-gray-500 uppercase">Filtraciones</p>
+                    </div>
+                    <div class="p-6 bg-white shadow-xl rounded-2xl text-center border-t-4 border-orange-400">
+                        <span class="text-orange-400 text-4xl font-bold block mb-2">+10</span>
+                        <p class="text-sm font-bold text-gray-500 uppercase">Años de vida útil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-900 py-16 md:py-24 text-white">
+            <div class="max-w-[1200px] mx-auto px-5">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">Nuestras Soluciones Técnicas</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">Impermeabilización Total</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Sellado de juntas, traslapes y pernos con poliuretano de alta resistencia y mantos asfálticos para eliminar filtraciones.</p>
+                    </div>
+                    <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">Tratamiento Anticorrosivo</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Limpieza mecánica y aplicación de pinturas epóxicas y poliuretano para proteger la estructura contra el salitre y la humedad.</p>
+                    </div>
+                    <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">Cambio de Coberturas</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Suministro e instalación de planchas de Aluzinc, coberturas termo-acústicas y policarbonato para iluminación natural.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-[1200px] mx-auto px-5 py-16 md:py-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">¿Cómo trabajamos?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-2xl group-hover:bg-blue-600 group-hover:text-white transition-all">1</div>
+                    <h4 class="font-bold mb-2">Inspección</h4>
+                    <p class="text-sm text-gray-500">Evaluamos el estado de las planchas y puntos de filtración.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-2xl group-hover:bg-blue-600 group-hover:text-white transition-all">2</div>
+                    <h4 class="font-bold mb-2">Limpieza</h4>
+                    <p class="text-sm text-gray-500">Eliminación de residuos, moho y óxido existente.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-2xl group-hover:bg-blue-600 group-hover:text-white transition-all">3</div>
+                    <h4 class="font-bold mb-2">Reparación</h4>
+                    <p class="text-sm text-gray-500">Cambio de accesorios y aplicación de selladores técnicos.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-2xl group-hover:bg-blue-600 group-hover:text-white transition-all">4</div>
+                    <h4 class="font-bold mb-2">Certificación</h4>
+                    <p class="text-sm text-gray-500">Entrega de informe final y garantía de estanqueidad.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</MainLayout>

@@ -16,11 +16,92 @@ import ClientsCarousel from "../components/clients-carousel.astro";
 	<main>
 		<Hero />
 		<ClientsCarousel />
-		<!-- <Stats /> -->
 		<About />
+		<section class="py-12 bg-gray-50 border-y border-gray-100">
+			<div class="max-w-[1250px] mx-auto px-5">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+				
+				<div class="text-center">
+					<p class="text-[#FFA100] text-4xl md:text-5xl font-black">+100</p>
+					<p class="text-gray-500 text-xs md:text-sm font-bold uppercase mt-2">Proyectos Ejecutados</p>
+				</div>
+
+				<div class="text-center">
+					<p class="text-[#00388B] text-4xl md:text-5xl font-black">100%</p>
+					<p class="text-gray-500 text-xs md:text-sm font-bold uppercase mt-2">Acero Certificado</p>
+				</div>
+
+				<div class="text-center border-x-0 md:border-x border-gray-200 px-4">
+					<p class="text-[#00388B] text-4xl md:text-5xl font-black">+10</p>
+					<p class="text-gray-500 text-xs md:text-sm font-bold uppercase mt-2">Años de Trayectoria</p>
+				</div>
+
+				<div class="text-center">
+					<p class="text-[#FFA100] text-4xl md:text-5xl font-black">0</p>
+					<p class="text-gray-500 text-xs md:text-sm font-bold uppercase mt-2">Incidentes de Seguridad</p>
+				</div>
+
+				</div>
+			</div>
+		</section>
 		<Services />
+		<section class="py-16 bg-[#00388B] text-white">
+  <div class="max-w-[1250px] mx-auto px-5">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+      
+      <div class="flex flex-col items-center space-y-4">
+        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+          <img src={`${import.meta.env.BASE_URL}images/iconos/shield.png`} alt="Seguridad" class="w-8 h-8"/>
+        </div>
+        <h3 class="text-xl font-bold uppercase tracking-wider">Seguridad Certificada</h3>
+        <p class="text-blue-100 text-sm leading-relaxed">Trabajamos bajo normativas técnicas sismo-resistentes para garantizar la integridad de su carga y personal.</p>
+      </div>
+
+      <div class="flex flex-col items-center space-y-4">
+        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+          <img src={`${import.meta.env.BASE_URL}images/iconos/rules.png`} alt="Diseño" class="w-8 h-8"/>
+        </div>
+        <h3 class="text-xl font-bold uppercase tracking-wider">Diseño a Medida</h3>
+        <p class="text-blue-100 text-sm leading-relaxed">Optimizamos cada metro cuadrado de su almacén con soluciones de ingeniería personalizadas según su operación.</p>
+      </div>
+
+      <div class="flex flex-col items-center space-y-4">
+        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+          <img src={`${import.meta.env.BASE_URL}images/iconos/clock.png`} alt="Tiempo" class="w-8 h-8"/>
+        </div>
+        <h3 class="text-xl font-bold uppercase tracking-wider">Respuesta Ágil</h3>
+        <p class="text-blue-100 text-sm leading-relaxed">Atención inmediata en servicios de mantenimiento y montaje en todo Lima y Callao, minimizando sus paradas operativas.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 		<Projects />
 		<Clients />
+		<section class="py-20 flex justify-center px-5">
+			<div class="w-full max-w-[1250px] bg-gradient-to-r from-[#00388B] to-blue-900 rounded-[2rem] p-8 md:p-16 relative overflow-hidden shadow-2xl">
+				
+				<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+				
+				<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+				<div class="text-center md:text-left">
+					<h2 class="text-white text-3xl md:text-5xl font-black leading-tight uppercase tracking-tighter">
+					¿Listo para optimizar <br/> <span class="text-[#FFA100]">su almacén?</span>
+					</h2>
+					<p class="text-blue-100 mt-4 text-lg">Solicite una inspección técnica o una cotización sin compromiso.</p>
+				</div>
+
+				<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+					<a href="https://wa.me/51923808882" target="_blank" class="px-8 py-4 bg-[#25D366] hover:bg-[#1ebd57] text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+					<span>WhatsApp Directo</span>
+					</a>
+					<a href="/contactos" class="px-8 py-4 bg-white text-[#00388B] hover:bg-gray-100 font-bold rounded-xl shadow-lg transition-all text-center">
+					Enviar Correo
+					</a>
+				</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </MainLayout>
 

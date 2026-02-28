@@ -1,24 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import boartLongyear from "../assets/images/logos/boart-longyear-w.png";
+import cerroVerde from "../assets/images/logos/cerro-verde-w.png";
+import coreptec from "../assets/images/logos/coreptec-w.png";
+import danper from "../assets/images/logos/danper-w.png";
+import friopacking from "../assets/images/logos/friopacking-w.png";
+import frioteam from "../assets/images/logos/frioteam-w.png";
+import soltrack from "../assets/images/logos/logo_soltrak-w.png";
+import overall from "../assets/images/logos/overall_blue-w.png";
+import puraFruit from "../assets/images/logos/pura-fruit-w.png";
+import savar from "../assets/images/logos/savar-w.jpg";
+import servifabrick from "../assets/images/logos/servifabrick-azul.png";
+import union from "../assets/images/logos/union-azul.png";
+---
 <section class="bg-[#00388B] overflow-hidden py-6">
   <div class="relative w-full flex">
     <div class="flex w-max animate-scroll items-center">
 
       <div class="flex gap-12 md:gap-20 items-center px-6 md:px-10">
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/boart-longyear-w.png`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/cerro-verde-w.png`} class="logo"/>
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/coreptec-w.png`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/danper-w.png`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/friopacking-w.png`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/frioteam-w.png`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/logo_soltrak-w.png`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/overall_blue-w.png`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/pura-fruit-w.png`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/savar-w.jpg`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/servifabrick-azul.png`} class="logo" />
-        <img src={`${import.meta.env.BASE_URL}images/img-clientes/union-azul.png`} class="logo" />
+        <Image src={boartLongyear} alt="Logo de Boart Longyear - Cliente de P&A Racks" class="logo" quality="mid" />
+        <Image src={cerroVerde} alt="Sociedad Minera Cerro Verde - Almacenamiento Industrial" class="logo" quality="mid" />
+        <Image src={coreptec} alt="Logo de Coreptec - Soluciones de Ingeniería" class="logo" quality="mid" />
+        <Image src={danper} alt="Danper - Cliente de sistemas de racks" class="logo" quality="mid" />
+        <Image src={friopacking} alt="Friopacking - Almacenamiento en frío" class="logo" quality="mid" />
+        <Image src={frioteam} alt="Logo de Frioteam - Proyectos Industriales" class="logo" quality="mid" />
+        <Image src={soltrack} alt="Soltrak - Equipamiento Industrial" class="logo" quality="mid" />
+        <Image src={overall} alt="Overall Business - Cliente Logístico" class="logo" quality="mid" />
+        <Image src={puraFruit} alt="Pura Fruit - Almacenamiento Agroindustrial" class="logo" quality="mid" />
+        <Image src={savar} alt="Savar Corporación Logística - Cliente de P&A Racks" class="logo" quality="mid" />
+        <Image src={servifabrick} alt="Servifabrick - Mantenimiento de Racks" class="logo" quality="mid" />
+        <Image src={union} alt="Logo de Unión - Soluciones de Almacenamiento" class="logo" quality="mid" />
       </div>
 
     </div>
-
   </div>
 
 </section>
@@ -26,12 +40,12 @@
 <style>
 
   .logo {
-    height: clamp(30px, 6vw, 45px); /* Ajustado para que no sea gigante en desktop */
+    height: clamp(30px, 6vw, 45px);
     width: auto;
     object-fit: contain;
     filter: brightness(0) invert(1); 
     opacity: 0.7;
-    flex-shrink: 0; /* Vital: evita que el navegador aplaste el logo */
+    flex-shrink: 0; 
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
@@ -49,12 +63,10 @@
     animation: scroll 35s linear infinite;
   }
 
-  /* Pausar al pasar el mouse para UX */
   .animate-scroll:hover {
     animation-play-state: paused;
   }
 
-  /* En móviles, menos logos visibles = animación más rápida */
   @media (max-width: 768px) {
     .animate-scroll {
       animation-duration: 20s;

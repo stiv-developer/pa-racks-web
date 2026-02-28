@@ -1,16 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import primerBanner from '../assets/images/banner/banner-inicio/img-1.jpeg';
+import segundoBanner from '../assets/images/banner/banner-inicio/img-2.jpeg';
+import tercerBanner from '../assets/images/banner/banner-inicio/img-3.jpeg';
+import cuartoBanner from '../assets/images/banner/banner-inicio/img-4.jpeg';
+---
 <section class="relative w-full h-[70vh] md:h-[90vh] lg:h-screen overflow-hidden bg-gray-900">
   
   <div class="absolute inset-0 z-0">
     <div id="carousel" class="flex w-full h-full transition-transform duration-1000 ease-in-out">
-      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-1.jpeg`} 
-           alt="Racks industriales para almacenes de alta densidad" 
-           class="w-full h-full object-cover flex-shrink-0" 
-           fetchpriority="high" loading="eager">
+
+      <Image src={primerBanner}
+              alt="Racks industriales para almacenes de alta densidad"
+              class="w-full h-full object-cover flex-shrink-0"
+              loading="eager"
+              fetchpriority="high"
+              quality="mid"
+              width={1920}
+              height={1080}/>
       
-      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-2.jpeg`} alt="Sistemas de almacenamiento selectivo en Perú" class="w-full h-full object-cover flex-shrink-0" loading="lazy">
-      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-3.jpeg`} alt="Instalación de racks industriales certificados" class="w-full h-full object-cover flex-shrink-0" loading="lazy">
-      <img src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-4.jpeg`} alt="Optimización de espacios logísticos" class="w-full h-full object-cover flex-shrink-0" loading="lazy">
-    </div>
+      <Image src={segundoBanner}
+              alt="Sistemas de almacenamiento selectivo en Perú"
+              class="w-full h-full object-cover flex-shrink-0"
+              loading="eager"
+              fetchpriority="high"
+              quality="mid"
+              width={1920}
+              height={1080}/>
+
+      <Image src={tercerBanner}
+              alt="Instalación de racks industriales certificados"
+              class="w-full h-full object-cover flex-shrink-0"
+              loading="eager"
+              fetchpriority="high"
+              quality="mid"
+              width={1920}
+              height={1080}/>
+      
+      <Image src={cuartoBanner}
+              alt="Optimización de espacios logísticos"
+              class="w-full h-full object-cover flex-shrink-0"
+              loading="eager"
+              fetchpriority="high"
+              quality="mid"
+              width={1920}
+              height={1080}/> 
+
+     </div>
   </div>
 
   <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10"></div>
@@ -35,10 +71,12 @@
       </p>
 
       <div class="mt-8 flex flex-wrap gap-4">
-        <a href={`${import.meta.env.BASE_URL}proyectos`} class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-md transition-all transform hover:-translate-y-1 shadow-lg">
+        <a href={`${import.meta.env.BASE_URL}proyectos`} 
+            class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-md transition-all transform hover:-translate-y-1 shadow-lg">
           Ver Proyectos
         </a>
-        <a href={`${import.meta.env.BASE_URL}contactos`} class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-md backdrop-blur-md transition-all border border-white/30">
+        <a href={`${import.meta.env.BASE_URL}contactos`} 
+            class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-md backdrop-blur-md transition-all border border-white/30">
           Solicitar Cotización
         </a>
       </div>

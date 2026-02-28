@@ -1,3 +1,8 @@
+---
+import { Image } from 'astro:assets';
+import almacenamiento from '../assets/images/inicio/almacenamiento.jpeg';
+import mantenimientoTecho from '../assets/images/inicio/mantenimiento-de-techo.jpeg';
+---
 <section class="py-20 px-5 flex justify-center bg-gray-50/50">
   <div class="w-full max-w-[1250px]">
     
@@ -15,12 +20,12 @@
 
       <article class="relative overflow-hidden rounded-3xl shadow-xl group cursor-pointer">
         <a href="/sistemas-de-almacenamiento" class="block h-full group">
-          <img 
-            src={`${import.meta.env.BASE_URL}images/almacenamiento.jpeg`} 
-            alt="Diseño e instalación de sistemas de almacenamiento industrial y racks"
-            class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-110"
-            loading="lazy"
-          >
+
+          <Image src={almacenamiento}
+              alt="Diseño e instalación de sistemas de almacenamiento industrial y racks"
+              class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-110"
+              loading="eager"
+              fetchpriority="high"/>
 
           <div class="absolute inset-0 bg-gradient-to-t from-[#00388B]/90 via-black/20 to-transparent transition-opacity duration-500 group-hover:via-[#00388B]/40"></div>
 
@@ -43,12 +48,12 @@
 
       <article class="relative overflow-hidden rounded-3xl shadow-xl group cursor-pointer">
         <a href="/mantenimiento-de-techos" class="block h-full group">
-          <img 
-            src={`${import.meta.env.BASE_URL}images/mantenimiento-de-techo.jpeg`}  
-            alt="Servicio preventivo y correctivo de mantenimiento de techos industriales"
-            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-            loading="lazy"
-          >
+
+          <Image src={mantenimientoTecho}
+              alt="Servicio preventivo y correctivo de mantenimiento de techos industriales"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              loading="eager"
+              fetchpriority="high"/>
 
           <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-black/20 to-transparent transition-opacity duration-500 group-hover:via-gray-900/40"></div>
 

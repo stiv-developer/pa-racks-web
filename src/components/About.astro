@@ -1,14 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import nosotrosHero from '../assets/images/banner/nosotros-hero.jpg';
+---
+
 <section class="py-16 md:py-24 flex justify-center bg-white overflow-hidden">
   <div class="max-w-[1250px] w-full px-5">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       
       <div class="relative group">
         <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-50 rounded-full z-0 animate-pulse"></div>
-        <img 
-          src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`} 
-          alt="Equipo de P&A Racks trabajando en soluciones de almacenamiento industrial" 
-          class="relative z-10 rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 object-cover h-[400px] md:h-[550px] w-full"
-        />
+
+        <Image src={nosotrosHero}
+              alt="Equipo de P&A Racks trabajando en soluciones de almacenamiento industrial"
+              class="relative z-10 rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 object-cover h-[400px] md:h-[550px] w-full"
+              loading="eager"
+              fetchpriority="high"
+              quality="mid"/>
+
         <div class="absolute -bottom-6 -right-6 bg-[#00388B] p-8 rounded-2xl shadow-xl z-20 hidden md:block">
           <p class="text-white font-black text-4xl leading-none italic">+10</p>
           <p class="text-blue-200 text-xs uppercase tracking-widest mt-1">Años de <br/> experiencia</p>

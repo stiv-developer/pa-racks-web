@@ -7,7 +7,10 @@ import Services from '../components/Services.astro';
 import Projects from '../components/Projects.astro';
 import Clients from '../components/Clients.astro';
 import ClientsCarousel from "../components/clients-carousel.astro";
-
+import { Image } from 'astro:assets';
+import shield from '../assets/images/iconos/shield.png';
+import rules from '../assets/images/iconos/rules.png';
+import clock from '../assets/images/iconos/clock.png';
 ---
 
 <MainLayout>
@@ -50,7 +53,9 @@ import ClientsCarousel from "../components/clients-carousel.astro";
 				
 				<div class="flex flex-col items-center space-y-4">
 					<div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
-					<img src={`${import.meta.env.BASE_URL}images/iconos/shield.png`} alt="Seguridad" class="w-8 h-8"/>
+
+					<Image src={shield} alt="Seguridad" class="w-8 h-8" loading="eager"/>
+
 					</div>
 					<h3 class="text-xl font-bold uppercase tracking-wider">Seguridad Certificada</h3>
 					<p class="text-blue-100 text-sm leading-relaxed">Trabajamos bajo normativas técnicas sismo-resistentes para garantizar la integridad de su carga y personal.</p>
@@ -58,7 +63,8 @@ import ClientsCarousel from "../components/clients-carousel.astro";
 
 				<div class="flex flex-col items-center space-y-4">
 					<div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
-					<img src={`${import.meta.env.BASE_URL}images/iconos/rules.png`} alt="Diseño" class="w-8 h-8"/>
+
+					<Image src={rules} alt="Diseño" class="w-8 h-8" loading="eager"/>
 					</div>
 					<h3 class="text-xl font-bold uppercase tracking-wider">Diseño a Medida</h3>
 					<p class="text-blue-100 text-sm leading-relaxed">Optimizamos cada metro cuadrado de su almacén con soluciones de ingeniería personalizadas según su operación.</p>
@@ -66,7 +72,8 @@ import ClientsCarousel from "../components/clients-carousel.astro";
 
 				<div class="flex flex-col items-center space-y-4">
 					<div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
-					<img src={`${import.meta.env.BASE_URL}images/iconos/clock.png`} alt="Tiempo" class="w-8 h-8"/>
+
+					<Image src={clock} alt="Tiempo" class="w-8 h-8" loading="eager"/>
 					</div>
 					<h3 class="text-xl font-bold uppercase tracking-wider">Respuesta Ágil</h3>
 					<p class="text-blue-100 text-sm leading-relaxed">Atención inmediata en servicios de mantenimiento y montaje en todo Lima y Callao, minimizando sus paradas operativas.</p>

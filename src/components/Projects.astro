@@ -1,16 +1,22 @@
 ---
+import { Image } from "astro:assets";
+import persona from "../assets/images/inicio/persona.png";
+import mantenimientoTecho from "../assets/images/inicio/mantenimiento-de-techo-7.jpeg";
+import armadoMiniRacks from "../assets/images/inicio/armado-de-mini-racks-1.jpeg";
+
+
 const projects = [
   {
     title: "Mantenimiento de Techo Industrial",
     location: "Chorrillos, Lima",
     slug: "mantenimiento-de-techos-industriales",
-    image: "images/img-proyectos/mantenimiento-de-techo/mantenimiento-de-techo-7.jpeg",
+    image: mantenimientoTecho,
   },
   {
     title: "Instalación de Mini Racks",
     location: "Huachipa, Lima",
     slug: "instalación-y-armado-de-mini-racks",
-    image: "images/img-proyectos/armado-de-mini-racks/armado-de-mini-racks-1.jpeg",
+    image: armadoMiniRacks,
   }
 ];
 ---
@@ -29,11 +35,12 @@ const projects = [
       </div>
 
       <div class="hidden lg:block">
-        <img 
-          src="images/persona.png" 
-          alt="Ingeniero de P&A Racks supervisando proyecto" 
-          class="h-[500px] absolute right-10 bottom-0 pointer-events-none drop-shadow-2xl translate-y-[20%]"
-        >
+
+        <Image src={persona}
+              alt="Ingeniero de P&A Racks supervisando proyecto"
+              class="h-[500px] w-[350px] absolute right-10 bottom-0 pointer-events-none drop-shadow-2xl translate-y-[20%]"
+              loading="eager"/>
+
       </div>
     </div>
 
@@ -41,13 +48,11 @@ const projects = [
       {projects.map((project) => (
         <article class="group relative overflow-hidden rounded-2xl shadow-lg bg-white border border-gray-100">
           <a href={`/proyectos/${project.slug}`} class="block relative h-[350px] md:h-[450px]">
-            
-            <img 
-              src={`${import.meta.env.BASE_URL}${project.image}`}
-              alt={`Proyecto de ${project.title} en ${project.location}`}
-              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-              loading="lazy"
-            />
+
+            <Image src={project.image}
+                alt={`Proyecto de ${project.title} en ${project.location}`}
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-1100"
+                loading="lazy"/>
 
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
 

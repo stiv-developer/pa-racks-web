@@ -1,88 +1,114 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from 'astro:assets';
+import bannerInicio from '../assets/images/banner/banner-inicio/img-2.jpeg';
+import logoBoartLongyearAzul from '../assets/images/logos/boart-longyear-azul.png';
+import logoBoartLongyearBlanco from '../assets/images/logos/boart-longyear-w.png';
+import logoCerroVerdeAzul from '../assets/images/logos/cerro-verde-azul.png';
+import logoCerroVerdeColor from '../assets/images/logos/cerro_verde.png';
+import logoCoreptecAzul from '../assets/images/logos/coreptec-azul.png';
+import logoCoreptecColor from '../assets/images/logos/coreptec.svg';
+import logoDanperAzul from '../assets/images/logos/danper-azul.png';
+import logoDanperColor from '../assets/images/logos/danper.svg';
+import logoFriopackingAzul from '../assets/images/logos/friopacking-azul.png';
+import logoFriopackingColor from '../assets/images/logos/friopacking.png';
+import logoFrioteamAzul from '../assets/images/logos/frioteam-azul.png';
+import logoFrioteamColor from '../assets/images/logos/frioteam.svg';
+import logoSoltrackAzul from '../assets/images/logos/logo_soltrak-azul.png';
+import logoSoltrackColor from '../assets/images/logos/logo_soltrak.png';
+import logoOverallAzul from '../assets/images/logos/overall_blue-azul.png';
+import logoOverallColor from '../assets/images/logos/overall_blue.svg';
+import logoPuraFruitAzul from '../assets/images/logos/pura-fruit-azul.png';
+import logoPuraFruitColor from '../assets/images/logos/pura-fruit.png';
+import logoSavarAzul from '../assets/images/logos/savar-azul.jpg';
+import logoSavarColor from '../assets/images/logos/savar.jpg';
+import logoServiFabrickAzul from '../assets/images/logos/servifabrick-azul.png';
+import logoServiFabrickColor from '../assets/images/logos/servifabrick.png';
+import logoUnionAzul from '../assets/images/logos/union-azul.png';
+import logoUnionColor from '../assets/images/logos/union.png';
 
 const clientes = [
   {
     nombre: "Boart Longyear",
-    logoAzul: "boart-longyear-azul.png",
-    logoColor: "boart-longyear-w.png",
+    logoAzul: logoBoartLongyearAzul,
+    logoColor: logoBoartLongyearBlanco,
     isWhite: true,
     alt: "Boart Longyear cliente de R&A Racks"
   },
   {
     nombre: "Cerro Verde",
-    logoAzul: "cerro-verde-azul.png",
-    logoColor: "cerro_verde.png",
+    logoAzul: logoCerroVerdeAzul,
+    logoColor: logoCerroVerdeColor,
     isWhite: false,
     alt: "Sociedad Minera Cerro Verde"
   },
   {
     nombre: "Coreptec",
-    logoAzul: "coreptec-azul.png",
-    logoColor: "coreptec.svg",
+    logoAzul: logoCoreptecAzul,
+    logoColor: logoCoreptecColor,
     isWhite: false,
     alt: "Coreptec soluciones industriales"
   },
   {
     nombre: "Danper",
-    logoAzul: "danper-azul.png",
-    logoColor: "danper.svg",
+    logoAzul: logoDanperAzul,
+    logoColor: logoDanperColor,
     isWhite: true,
     alt: "Danper cliente estratégico"
   },
   {
     nombre: "Friopacking",
-    logoAzul: "friopacking-azul.png",
-    logoColor: "friopacking.png",
+    logoAzul: logoFriopackingAzul,
+    logoColor: logoFriopackingColor,
     isWhite: true,
     alt: "Friopacking almacenamiento en frío"
   },
   {
     nombre: "Frioteam",
-    logoAzul: "frioteam-azul.png",
-    logoColor: "frioteam.svg",
+    logoAzul: logoFrioteamAzul,
+    logoColor: logoFrioteamColor,
     isWhite: true,
     alt: "Frioteam soluciones logísticas"
   },
   {
     nombre: "Soltrak",
-    logoAzul: "logo_soltrak-azul.png",
-    logoColor: "logo_soltrak.png",
+    logoAzul: logoSoltrackAzul,
+    logoColor: logoSoltrackColor,
     isWhite: false,
     alt: "Soltrak Ferreycorp"
   },
   {
     nombre: "Overall",
-    logoAzul: "overall_blue-azul.png",
-    logoColor: "overall_blue.svg",
+    logoAzul: logoOverallAzul,
+    logoColor: logoOverallColor,
     isWhite: false,
     alt: "Overall Business"
   },
   {
     nombre: "Pura Fruit",
-    logoAzul: "pura-fruit-azul.png",
-    logoColor: "pura-fruit.png",
+    logoAzul: logoPuraFruitAzul,
+    logoColor: logoPuraFruitColor,
     isWhite: true,
     alt: "Pura Fruit sector agroindustrial"
   },
   {
     nombre: "Savar",
-    logoAzul: "savar-azul.jpg",
-    logoColor: "savar.jpg",
+    logoAzul: logoSavarAzul,
+    logoColor: logoSavarColor,
     isWhite: false,
     alt: "Savar Agentes de Aduana"
   },
   {
     nombre: "Servifabrick",
-    logoAzul: "servifabrick-azul.png",
-    logoColor: "servifabrick.png",
+    logoAzul: logoServiFabrickAzul,
+    logoColor: logoServiFabrickColor,
     isWhite: false,
     alt: "Servifabrick ingeniería"
   },
   {
     nombre: "Union",
-    logoAzul: "union-azul.png",
-    logoColor: "union.png",
+    logoAzul: logoUnionAzul,
+    logoColor: logoUnionColor,
     isWhite: false,
     alt: "Productos Union"
   }
@@ -92,13 +118,15 @@ const clientes = [
 <MainLayout>
   <main>
     <section class="relative h-[460px] lg:h-[600px] overflow-hidden">
-      <img
-        src={`${import.meta.env.BASE_URL}images/banner/banner-inicio/img-2.jpeg`}
-        alt="Clientes corporativos y empresas que confían en nuestras soluciones de almacenamiento"
-        class="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-110"
-        loading="eager"
-        fetchpriority="high"
-      />
+
+      <Image src={bannerInicio}
+          alt="Clientes corporativos y empresas que confían en nuestras soluciones de almacenamiento"
+          class="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-110"
+          loading="eager"
+          fetchpriority="high"
+          quality="mid"
+          width={1920}
+          height={1080}/>
 
       <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
 
@@ -141,17 +169,19 @@ const clientes = [
                 ${cliente.isWhite ? 'hover:bg-[#001F4D]' : 'hover:bg-gray-100'}`}>
                 
                 <div class="relative h-16 w-full flex items-center justify-center">
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/img-clientes/${cliente.logoAzul}`}
-                    alt={cliente.alt}
-                    class="absolute max-h-full max-w-full object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-90"
-                  />
 
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/img-clientes/${cliente.logoColor}`}
-                    alt={`${cliente.nombre} original`}
-                    class="absolute max-h-full max-w-full object-contain opacity-0 scale-110 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100"
-                  />
+                  <Image 
+                        src={cliente.logoAzul}
+                        alt={cliente.alt}
+                        class="absolute max-h-full max-w-full object-contain transition-all duration-500 group-hover:opacity-0 group-hover:scale-90"
+                        loading="lazy"/>
+
+                  <Image 
+                        src={cliente.logoColor}
+                        alt={cliente.alt}
+                        class="absolute max-h-full max-w-full object-contain opacity-0 scale-110 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100"
+                        loading="lazy"/>
+
                 </div>
               </div>
             ))}

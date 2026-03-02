@@ -1,5 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import banner from "../assets/images/banner/nosotros-hero.jpg";
+import imgChorrillos from "../assets/images/servicios/mantenimiento-de-techos/mantenimiento-de-techo-7.jpeg";
+import imgHuachipa from "../assets/images/proyectos/armado-de-mini-racks-huachipa/armado-de-mini-racks-1.jpeg";
+import iconGps from "../assets/images/iconos/gps-icon.svg";
 
 const projects = [
   {
@@ -7,14 +12,14 @@ const projects = [
     slug: "mantenimiento-de-techos-industriales",
     location: "Chorrillos, Lima",
     category: "Mantenimiento Industrial",
-    image: "images/img-proyectos/mantenimiento-de-techo/mantenimiento-de-techo-7.jpeg",
+    image: imgChorrillos,
   },
   {
     title: "Instalación y Armado de Mini Racks",
     slug: "instalacion-y-armado-de-mini-racks",
     location: "Huachipa, Lima",
     category: "Sistemas de Almacenamiento",
-    image: "images/img-proyectos/armado-de-mini-racks/armado-de-mini-racks-1.jpeg",
+    image: imgHuachipa,
   }
 ];
 ---
@@ -23,12 +28,12 @@ const projects = [
   <main>
 
     <section class="relative h-[400px] md:h-[450px] lg:h-[600px] overflow-hidden">
-      <img 
-        src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`}
-        alt="Portafolio de proyectos ejecutados en sistemas de almacenamiento y construcción industrial"
-        class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-        loading="eager"
-        fetchpriority="high">
+
+        <Image src={banner}
+            alt="Portafolio de proyectos ejecutados en sistemas de almacenamiento y construcción industrial"
+            class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+            loading="eager"
+            fetchpriority="high" />
 
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
@@ -53,6 +58,7 @@ const projects = [
         </div>
       </div>
     </section>
+
     <div class="max-w-[1200px] mx-auto px-5 py-16">
       <div class="mb-12">
         <h2 class="text-3xl font-bold text-gray-900 italic border-l-4 border-blue-600 pl-4">
@@ -65,9 +71,9 @@ const projects = [
         {projects.map((project) => (
           <article class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gray-900">
             <a href={`/proyectos/${project.slug}`} class="block relative h-[400px]">
-              
-              <img 
-                src={`${import.meta.env.BASE_URL}${project.image}`}
+            
+              <Image 
+                src={project.image}
                 alt={`${project.title} en ${project.location} - Ingeniería Logística`}
                 class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                 loading="lazy"
@@ -83,7 +89,9 @@ const projects = [
 
               <div class="absolute bottom-0 left-0 p-6 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                 <div class="flex items-center gap-2 text-blue-400 text-xs font-semibold mb-2">
-                  <img src={`${import.meta.env.BASE_URL}images/iconos/gps-icon.svg`} class="w-3 h-3 invert" alt="Ubicación" />
+
+                  <Image src={iconGps} class="w-3 h-3 invert" alt="Ubicación"/>
+
                   <span>{project.location}</span>
                 </div>
 

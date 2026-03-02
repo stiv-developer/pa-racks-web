@@ -1,0 +1,113 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+// 1. Generar las rutas dinámicas basadas en los archivos de src/content/blog/
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, 
+    props: { entry },
+  }));
+}
+
+// 2. Obtener la entrada (post) específica
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<MainLayout>
+    <Layout title={`${entry.data.title} | P&A RACKS`}>
+        <main class="py-12 md:py-24 bg-slate-50/50">
+            <article class="max-w-4xl mx-auto">
+            
+            <div class="bg-white rounded-3xl shadow-2xl shadow-blue-900/5 border border-slate-100 overflow-hidden">
+                
+                {entry.data.image && (
+                <div class="w-full h-[300px] md:h-[450px] overflow-hidden">
+                    <Image 
+                        src={entry.data.image} 
+                        alt={entry.data.title} 
+                        class="w-full h-auto rounded-2xl shadow-xl mb-10"
+                    />
+                </div>
+                )}
+
+                <div class="p-8 md:p-16">
+                <div class="flex flex-wrap items-center gap-3 mb-8">
+                    {entry.data.tags.map(tag => (
+                    <span class="text-[11px] font-black uppercase tracking-[0.15em] bg-[#00388B]/5 text-[#00388B] px-4 py-1.5 rounded-full border border-[#00388B]/10">
+                        {tag}
+                    </span>
+                    ))}
+                    <span class="text-slate-400 text-sm ml-auto font-medium">
+                    {entry.data.pubDate.toLocaleDateString('es-PE', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    </span>
+                </div>
+
+                <div class="relative mb-12">
+                    <div class="absolute -left-8 md:-left-16 top-0 w-1 md:w-2 h-full bg-[#FFA100] rounded-full"></div>
+                    <h1 class="text-4xl md:text-6xl font-black text-[#00388B] uppercase tracking-tighter leading-[0.95] mb-6">
+                    {entry.data.title}
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-500 font-light italic leading-relaxed">
+                    {entry.data.description}
+                    </p>
+                </div>
+
+                <hr class="border-slate-100 mb-12" />
+
+                <div class="prose prose-slate prose-lg max-w-none 
+                            prose-headings:text-[#00388B] prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tight
+                            prose-p:text-slate-600 prose-p:leading-relaxed prose-p:text-lg
+                            prose-strong:text-slate-900 prose-strong:font-bold
+                            prose-li:text-slate-600
+                            prose-img:rounded-2xl prose-img:shadow-2xl
+                            prose-blockquote:border-l-[6px] prose-blockquote:border-[#FFA100] prose-blockquote:bg-slate-50 prose-blockquote:py-2 prose-blockquote:rounded-r-2xl prose-blockquote:not-italic prose-blockquote:font-medium prose-blockquote:text-[#00388B]">
+                    <Content />
+                </div>
+
+                <div class="mt-20 relative overflow-hidden bg-[#00388B] rounded-3xl p-8 md:p-12 text-center group">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-400/10 rounded-full blur-3xl group-hover:bg-blue-400/20 transition-colors"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-[#FFA100]/5 rounded-full blur-3xl"></div>
+
+                    <div class="relative z-10">
+                    <h3 class="text-white font-black text-2xl md:text-3xl uppercase tracking-tighter mb-6 leading-tight">
+                        ¿Necesitas asegurar la <br class="hidden md:block"/> integridad de tu almacén?
+                    </h3>
+                    <p class="text-blue-100 mb-8 max-w-md mx-auto font-medium">
+                        Evita accidentes y cumple con las normativas vigentes en Perú con nuestra inspección técnica especializada.
+                    </p>
+                    <a href="/contactos" 
+                        class="inline-flex items-center gap-3 bg-[#FFA100] text-[#001F4D] font-black px-10 py-5 rounded-2xl uppercase tracking-widest hover:bg-[#ffb333] hover:-translate-y-1 transition-all shadow-[0_10px_30px_rgba(255,161,0,0.3)]">
+                        Solicitar Inspección Técnica
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="mt-12 flex justify-between px-4">
+                <a href="/blog" class="text-[#00388B] font-bold flex items-center gap-2 hover:underline">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Volver al Blog
+                </a>
+            </div>
+            </article>
+        </main>
+    </Layout>
+</MainLayout>
+
+
+<style is:global>
+  /* Estilos adicionales para el contenido que viene del Markdown */
+  .prose h2 { @apply text-3xl mt-12 mb-6; }
+  .prose p { @apply mb-6 leading-relaxed; }
+  .prose blockquote { @apply border-l-4 border-[#FFA100] bg-gray-50 p-6 italic rounded-r-xl my-8; }
+</style>

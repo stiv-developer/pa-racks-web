@@ -1,19 +1,86 @@
 ---
+
+import {Image} from "astro:assets";
+import friopacking from "../assets/images/logos/friopacking.png";
+import danper from "../assets/images/logos/danper.svg";
+import puraFruit from "../assets/images/logos/pura-fruit.png";
+import savar from "../assets/images/logos/savar.jpg";
+import boartLongyear from "../assets/images/logos/boart-longyear.webp";
+import union from "../assets/images/logos/union.png";
+import cerroVerde from "../assets/images/logos/cerro_verde.png";
+import coreptec from "../assets/images/logos/coreptec.svg";
+import frioteam from "../assets/images/logos/frioteam.svg";
+import soltrack from "../assets/images/logos/logo_soltrak.png";
+import overall from "../assets/images/logos/overall_blue.svg";
+import servifabrick from "../assets/images/logos/servifabrick.png";
+
 const clients = [
-  { src: "images/img-clientes/friopacking.png", bg: "bg-gray-800" },
-  { src: "images/img-clientes/danper.svg", bg: "bg-red-800" },
-  { src: "images/img-clientes/pura-fruit.png", bg: "bg-gray-800" },
-  { src: "images/img-clientes/savar.jpg" },
-  { src: "images/img-clientes/boart-longyear.webp", bg: "bg-gray-500" },
-  { src: "images/img-clientes/union.png", },
-  { src: "images/img-clientes/servifabrick.png",  },
-  { src: "images/img-clientes/logo_soltrak.png" },
-  { src: "images/img-clientes/coreptec.svg"},
-  { src: "images/img-clientes/overall_blue.svg"},
-  { src: "images/img-clientes/frioteam.svg", bg: "bg-sky-950" },
+  { 
+    src: cerroVerde, 
+    alt: "Sociedad Minera Cerro Verde - Proyectos de almacenamiento minero por P&A Racks",
+    nombre: "Cerro Verde" 
+  },
+  { 
+    src: danper, 
+    bg: "bg-red-800",
+    alt: "Danper - Instalación de racks industriales para el sector agroindustrial",
+    nombre: "Danper" 
+  },
+  { 
+    src: friopacking, 
+    bg: "bg-gray-800",
+    alt: "Friopacking - Soluciones de racks para cámaras de frío y logística",
+    nombre: "Friopacking" 
+  },
+  { 
+    src: puraFruit, 
+    bg: "bg-gray-800",
+    alt: "Pura Fruit - Implementación de sistemas de almacenamiento agroindustrial",
+    nombre: "Pura Fruit"
+  },
+  { 
+    src: savar,
+    alt: "Savar Corporación Logística - Cliente estratégico de racks y estructuras metálicas",
+    nombre: "Savar" 
+  },
+  { 
+    src: boartLongyear,
+    bg: "bg-gray-500",
+    alt: "Boart Longyear - Estructuras metálicas para el sector minero e industrial",
+    nombre: "Boart Longyear"
+  },
+  { 
+    src: union, 
+    alt: "Empresa Unión - Proyectos de optimización de almacenes por P&A Racks",
+    nombre: "Union" 
+  },
+  { 
+    src: servifabrick, 
+    alt: "Servifabrick - Mantenimiento preventivo de racks industriales",
+    nombre: "Servifabrick"  
+  },
+  { 
+    src: soltrack, 
+    alt: "Soltrak - Suministro e instalación de estanterías metálicas industriales",
+    nombre: "Soltrak" 
+  },
+  { 
+    src: coreptec, 
+    alt: "Coreptec - Ingeniería y soluciones de almacenamiento de alta carga",
+    nombre: "Coreptec"
+  },
+  { 
+    src: overall, 
+    alt: "Overall Business - Gestión logística y racks de almacenamiento",
+    nombre: "Overall"
+  },
+  { 
+    src: frioteam, 
+    bg: "bg-sky-950",
+    alt: "Frioteam - Especialistas en refrigeración y racks para frío industrial",
+    nombre: "Frioteam" 
+  },
 ];
-
-
 ---
 
 <section class="py-16 md:py-24 md:py-20 bg-gray-50 overflow-hidden">
@@ -37,11 +104,9 @@ const clients = [
         {
           clients.map((client) => (
             <div class={`flex items-center justify-center p-2 rounded-md shrink-0 ${client.bg ?? ""}`}>
-              <img
-                src={`${import.meta.env.BASE_URL}${client.src}`}
-                alt="Cliente"
-                class="h-10 md:h-12 lg:h-14 w-auto"
-              />
+
+              <Image src={client.src} alt={client.alt} class="h-10 md:h-12 lg:h-14 w-auto" quality="mid" loading="lazy"/>
+              
             </div>
           ))
         }

@@ -1,5 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import imageMantenimientoRacksBanner from "../assets/images/servicios/mantenimiento-de-racks/mantenimiento-de-racks-banner.jpeg";
+import capacitacion from "../assets/images/servicios/mantenimiento-de-racks/capacitacion.jpg";
+import visitaTecnica from "../assets/images/servicios/mantenimiento-de-racks/visita-tecnica.jpeg";
 ---
 
 <MainLayout>
@@ -7,13 +11,13 @@ import MainLayout from "../layouts/MainLayout.astro";
     <section
       class="relative h-[420px] md:h-[450px] lg:h-[600px] overflow-hidden"
     >
-      <img
-        src={`${import.meta.env.BASE_URL}images/mantenimiento-de-racks/mantenimiento-de-racks-banner.jpeg`}
+
+      <Image 
+        src={imageMantenimientoRacksBanner} 
         alt="Servicio especializado de mantenimiento de racks y estanterías industriales"
         class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
         loading="eager"
-        fetchpriority="high"
-      />
+        fetchpriority="high"/>
 
       <div
         class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
@@ -97,12 +101,11 @@ import MainLayout from "../layouts/MainLayout.astro";
       </section>
 
       <div class="pb-20">
-        <img
-          src={`${import.meta.env.BASE_URL}images/capacitacion.jpg`}
+        <Image 
+          src={capacitacion} 
           alt="Capacitación técnica sobre seguridad en racks industriales y almacenamiento"
           class="w-full h-[300px] md:h-[500px] object-cover rounded-2xl shadow-lg"
-          loading="lazy"
-        />
+          loading="lazy"/>
       </div>
 
       <section class="max-w-4xl mb-20">
@@ -149,12 +152,12 @@ import MainLayout from "../layouts/MainLayout.astro";
             </div>
           </div>
           <div class="flex justify-center order-1 md:order-2">
-            <img
-              src={`${import.meta.env.BASE_URL}images/visita-tecnica.jpeg`}
+
+             <Image 
+              src={visitaTecnica} 
               alt="Ingeniero realizando inspección técnica de racks industriales"
-              class="w-full max-w-[500px] rounded-2xl shadow-2xl border-8 border-white"
-              loading="lazy"
-            />
+              class="w-full max-w-[500px] rounded-2xl shadow-2xl border-8 border-whit"
+              loading="lazy"/>
           </div>
         </div>
       </div>

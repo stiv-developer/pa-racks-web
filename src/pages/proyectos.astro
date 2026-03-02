@@ -36,7 +36,7 @@ const projects = [
         <div class="max-w-[1200px] mx-auto px-6 pb-12 w-full">
 
           <nav class="mb-4 flex items-center gap-2 text-blue-400 text-sm font-bold uppercase tracking-widest" aria-label="Breadcrumb">
-            <a href="/" class="hover:text-white transition-colors">Inicio</a>
+            <a href="/" aria-label="Ir a la página de inicio de P&A Racks" class="hover:text-white transition-colors">Inicio</a>
             <span class="text-gray-500">/</span>
             <span class="text-white/80">Casos de Éxito</span>
           </nav>
@@ -53,94 +53,57 @@ const projects = [
         </div>
       </div>
     </section>
-
-    <!-- <div class="max-w-[1200px] mx-auto px-5 py-10">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-        {
-          projects.map((project) => (
-                  <article class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-500">
-
-        <a href={`/proyectos/${project.slug}`} class="block relative">
-
-          <img 
-            src={`${import.meta.env.BASE_URL}${project.image}`}
-            alt={`${project.title} sistema de almacenamiento industrial`}
-            class="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
-            loading="lazy"
-          />
-
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition"></div>
-
-          <div class="absolute bottom-0 left-0 p-5 w-full">
-
-            <h2 class="text-white text-xl md:text-2xl font-bold">
-              {project.title}
-            </h2>
-
-            <p class="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition duration-500">
-              Ver más detalles →
-            </p>
-
-          </div>
-
-        </a>
-
-      </article>
-          ))
-        }
-      </div>
-    </div> -->
     <div class="max-w-[1200px] mx-auto px-5 py-16">
-  <div class="mb-12">
-    <h2 class="text-3xl font-bold text-gray-900 italic border-l-4 border-blue-600 pl-4">
-      Casos de Éxito y Soluciones Ejecutadas
-    </h2>
-    <p class="text-gray-600 mt-2">Explora nuestra experiencia técnica en diferentes distritos de Lima.</p>
-  </div>
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 italic border-l-4 border-blue-600 pl-4">
+          Casos de Éxito y Soluciones Ejecutadas
+        </h2>
+        <p class="text-gray-600 mt-2">Explora nuestra experiencia técnica en diferentes distritos de Lima.</p>
+      </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {projects.map((project) => (
-      <article class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gray-900">
-        <a href={`/proyectos/${project.slug}`} class="block relative h-[400px]">
-          
-          <img 
-            src={`${import.meta.env.BASE_URL}${project.image}`}
-            alt={`${project.title} en ${project.location} - Ingeniería Logística`}
-            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-            loading="lazy"
-          />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => (
+          <article class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 bg-gray-900">
+            <a href={`/proyectos/${project.slug}`} class="block relative h-[400px]">
+              
+              <img 
+                src={`${import.meta.env.BASE_URL}${project.image}`}
+                alt={`${project.title} en ${project.location} - Ingeniería Logística`}
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                loading="lazy"
+              />
 
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
 
-          <div class="absolute top-4 left-4">
-            <span class="bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
-              {project.category}
-            </span>
-          </div>
+              <div class="absolute top-4 left-4">
+                <span class="bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
+                  {project.category}
+                </span>
+              </div>
 
-          <div class="absolute bottom-0 left-0 p-6 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <div class="flex items-center gap-2 text-blue-400 text-xs font-semibold mb-2">
-              <img src={`${import.meta.env.BASE_URL}images/iconos/gps-icon.svg`} class="w-3 h-3 invert" alt="Ubicación" />
-              <span>{project.location}</span>
-            </div>
+              <div class="absolute bottom-0 left-0 p-6 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <div class="flex items-center gap-2 text-blue-400 text-xs font-semibold mb-2">
+                  <img src={`${import.meta.env.BASE_URL}images/iconos/gps-icon.svg`} class="w-3 h-3 invert" alt="Ubicación" />
+                  <span>{project.location}</span>
+                </div>
 
-            <h3 class="text-white text-xl md:text-2xl font-bold leading-tight">
-              {project.title}
-            </h3>
+                <h3 class="text-white text-xl md:text-2xl font-bold leading-tight">
+                  {project.title}
+                </h3>
 
-            <div class="flex items-center gap-2 mt-4 text-white font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <span class="border-b-2 border-blue-500 pb-1">Ver detalles del proyecto</span>
-              <span class="text-blue-400">→</span>
-            </div>
-          </div>
-        </a>
-      </article>
-    ))}
-    
-    <div class="hidden lg:flex flex-col justify-center items-center border-2 border-dashed border-gray-300 rounded-2xl p-10 text-center grayscale opacity-50">
-       <p class="text-gray-400 font-medium italic">Estamos documentando nuevos proyectos en Lima y provincias...</p>
+                <div class="flex items-center gap-2 mt-4 text-white font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span class="border-b-2 border-blue-500 pb-1">Ver detalles del proyecto</span>
+                  <span class="text-blue-400">→</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        ))}
+        
+        <div class="hidden lg:flex flex-col justify-center items-center border-2 border-dashed border-gray-300 rounded-2xl p-10 text-center grayscale opacity-50">
+          <p class="text-gray-400 font-medium italic">Estamos documentando nuevos proyectos en Lima y provincias...</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </main>
 </MainLayout>

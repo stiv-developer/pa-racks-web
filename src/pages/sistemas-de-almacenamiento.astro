@@ -1,5 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import banner from "../assets/images/servicios/sistemas-de-almacenamiento/nosotros-hero.jpg";
+import rackSelectivo from "../assets/images/servicios/sistemas-de-almacenamiento/rack-selectivo.jpeg";
+import rackAcumulativo from "../assets/images/servicios/sistemas-de-almacenamiento/rack-acumulativo.jpeg";
+import cantilever from "../assets/images/servicios/sistemas-de-almacenamiento/cantilever.jpeg";
+import rackAutoportante from "../assets/images/servicios/sistemas-de-almacenamiento/autoportante.jpeg";
+import miniRack from "../assets/images/servicios/sistemas-de-almacenamiento/mini-racks.jpeg";
+import entrepiso from "../assets/images/servicios/sistemas-de-almacenamiento/rack-entrepiso.jpeg";
+import estanteriaMetalicaFija from "../assets/images/servicios/sistemas-de-almacenamiento/estanteria-fija.jpeg";
+import estanteriaMetalicaMovil from "../assets/images/servicios/sistemas-de-almacenamiento/estanteria-movil.jpeg";
+import mezzanine from "../assets/images/servicios/sistemas-de-almacenamiento/mezanine.jpeg";
 
 const projects = [
   {
@@ -8,7 +19,7 @@ const projects = [
     category: "pesada",
     description:
       "Sistema de almacenamiento versátil para pallets que permite acceso directo a cada unidad de carga. Ideal para almacenes con alta rotación y gran variedad de productos.",
-    image: "images/sistema-almacenamiento/rack-selectivo.jpeg",
+    image: rackSelectivo,
   },
   {
     title: "RACK ACUMULATIVO",
@@ -16,7 +27,7 @@ const projects = [
     category: "pesada",
     description:
       "Sistema compacto diseñado para maximizar el aprovechamiento del espacio mediante almacenamiento por acumulación. Perfecto para productos homogéneos y alto volumen.",
-    image: "images/sistema-almacenamiento/rack-acumulativo.jpeg",
+    image: rackAcumulativo,
   },
   {
     title: "CANTILEVER",
@@ -24,7 +35,7 @@ const projects = [
     category: "pesada",
     description:
       "Estructura especializada para el almacenamiento de cargas largas y voluminosas como tubos, perfiles o madera. Ofrece gran resistencia y fácil acceso frontal.",
-    image: "images/sistema-almacenamiento/cantilever.jpeg",
+    image: cantilever,
   },
   {
     title: "RACK AUTOPORTANTE",
@@ -32,7 +43,7 @@ const projects = [
     category: "pesada",
     description:
       "Sistema estructural que integra racks como soporte principal del edificio. Ideal para centros logísticos de gran altura y almacenamiento automatizado.",
-    image: "images/sistema-almacenamiento/autoportante.jpeg",
+    image: rackAutoportante,
   },
   {
     title: "MINI RACK",
@@ -40,7 +51,7 @@ const projects = [
     category: "semi",
     description:
       "Solución eficiente para almacenamiento manual de cargas medianas. Diseñado para optimizar espacios en almacenes, talleres y áreas de picking.",
-    image: "images/sistema-almacenamiento/mini-racks.jpeg",
+    image: miniRack,
   },
   {
     title: "ENTREPISO RACK / ESTANTERIA",
@@ -48,7 +59,7 @@ const projects = [
     category: "semi",
     description:
       "Sistema que aprovecha la altura del almacén creando niveles adicionales de almacenamiento. Incrementa la capacidad sin necesidad de ampliar infraestructura.",
-    image: "images/sistema-almacenamiento/rack-entrepiso.jpeg",
+    image: entrepiso,
   },
   {
     title: "ESTANTERÍA METALICA FIJA",
@@ -56,7 +67,7 @@ const projects = [
     category: "ligera",
     description:
       "Estantería modular para almacenamiento liviano. Ideal para archivos, repuestos y productos de baja carga con acceso manual rápido y organizado.",
-    image: "images/sistema-almacenamiento/estanteria-fija.jpeg",
+    image: estanteriaMetalicaFija,
   },
   {
     title: "ESTANTERÍA METALICA MOVIL",
@@ -64,7 +75,7 @@ const projects = [
     category: "ligera",
     description:
       "Sistema deslizante que optimiza el espacio eliminando pasillos innecesarios. Perfecto para archivos, bibliotecas y almacenes de espacio reducido.",
-    image: "images/sistema-almacenamiento/estanteria-movil.jpeg",
+    image: estanteriaMetalicaMovil,
   },
   {
     title: "MEZZANINE ESTRUCTURAL",
@@ -72,7 +83,7 @@ const projects = [
     category: "especial",
     description:
       "Plataforma estructural diseñada para ampliar áreas operativas dentro de almacenes o plantas industriales. Solución ideal para oficinas, almacenamiento o producción.",
-    image: "images/sistema-almacenamiento/mezanine.jpeg",
+    image: mezzanine,
   },
 ];
 ---
@@ -80,13 +91,13 @@ const projects = [
 <MainLayout>
   <main>
     <section class="relative h-[450px] lg:h-[600px] overflow-hidden">
-      <img
-        src={`${import.meta.env.BASE_URL}images/banner/nosotros-hero.jpg`}
+
+      <Image  
+        src={banner} 
         alt="Sistemas de almacenamiento industrial y racks metálicos para logística"
         class="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-110"
         loading="eager"
-        fetchpriority="high"
-      />
+        fetchpriority="high"/>
 
       <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
 
@@ -150,12 +161,12 @@ const projects = [
                   {project.category === 'pesada' ? 'Industrial' : project.category}
                 </span>
               </div>
-              <img
-                src={`${import.meta.env.BASE_URL}${project.image}`}
-                alt={`Instalación de ${project.title} - R&A Racks Perú`}
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
+
+              <Image 
+                  src={project.image}
+                  alt={`Instalación de ${project.title} - R&A Racks Perú`}
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"/>
             </div>
 
             <div class="p-8 flex flex-col flex-grow">

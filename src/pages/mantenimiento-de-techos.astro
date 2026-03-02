@@ -1,15 +1,19 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import banner from "../assets/images/servicios/mantenimiento-de-techos/mantenimiento-de-techo-7.jpeg";
 ---
 
 <MainLayout>
     <main>
         <section class="relative h-[400px] md:h-[450px] lg:h-[600px] overflow-hidden">
-            <img src={`${import.meta.env.BASE_URL}images/img-proyectos/mantenimiento-de-techo/mantenimiento-de-techo-7.jpeg`} 
+
+            <Image 
+                src={banner} 
                 alt="Servicio especializado de mantenimiento de techos industriales y coberturas"
                 class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 loading="eager"
-                fetchpriority="high">
+                fetchpriority="high" />
 
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 

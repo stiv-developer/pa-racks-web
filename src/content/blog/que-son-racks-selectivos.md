@@ -17,7 +17,7 @@ La principal ventaja de este sistema es su **selectividad del 100%**. Esto signi
 Para entender por qué es la columna vertebral de muchos almacenes, analizamos sus características de ingeniería:
 
 1. **Acceso Directo y Unitario**
-Facilita un control de stock inmediato, ya que cada hueco es una ubicación única. Es ideal para almacenes con gran diversidad de referencias (SKUs).
+Facilita un control de stock inmediato, ya que cada nicho es una ubicación única. Es ideal para almacenes con gran diversidad de referencias (SKUs).
 
 2. **Versatilidad y Adaptabilidad**
 Los niveles de carga se pueden ajustar fácilmente para adaptarse a diferentes alturas y volúmenes de mercadería. Además, es compatible con la mayoría de montacargas convencionales.

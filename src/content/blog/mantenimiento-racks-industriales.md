@@ -13,7 +13,11 @@ En **P&A RACKS S.A.C.**, sabemos que la seguridad estructural es la base de una 
 Los operarios de almacén deben realizar una revisión rápida antes de cada turno. Se deben buscar golpes evidentes de montacargas o deformaciones en los puntales.
 
 #### 2. Inspección Técnica Semestral
-Recomendamos una revisión exhaustiva cada **6 meses** por parte de ingenieros especialistas. En zonas de alta rotación como **Huachipa o Callao**, la fatiga del metal puede ser más acelerada.
+Recomendamos una revisión exhaustiva cada **6 meses** por parte de ingenieros especialistas. La frecuencia y alcance de las inspecciones depende de la variedad de factores que son particulares y
+específicos de cada instalación y deberían definirse por la persona encargada de inspeccionar, para
+adecuarse a las condiciones de funcionamiento del almacén. Se tendrán en cuenta, la frecuencia y el
+método de funcionamiento, así como las dimensiones del almacén, el equipo de almacenaje utilizado y el
+personal involucrado, y todo lo que pudiera dañar la estructura.
 
 #### 3. Auditoría Anual Obligatoria
 Según las normativas de seguridad industrial en Perú, es vital contar con un informe técnico anual firmado por ingenieros colegiados que certifique la verticalidad y el torque de los pernos de anclaje.
